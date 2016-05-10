@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Divs</title>
+	<style>
+		div { color: green; width: 685px; height: 100%; border-style: double;
+		}
+		div > div {color: red; width: 634px; margin: 20px;
+		}
+		div > div > div {color: blue; float: left;
+		}
+		div > div > div >div {color: orange; width: 100px; height: 38px;
+		}
+	</style>
+</head>
+<body>
+	<div style="margin-left: 20px">
+		<div style="height: 150px">
+			<div style="width: 143px; height: 100px; margin: 20px 1px 20px 20px;"></div>
+			<div style="width: 286px; height: 100px; margin: 20px 1px 20px 1px;"></div>
+			<div style="width: 143px; height: 100px; margin: 20px 20px 20px 1px;">
+				<div style="margin: 5px 20px 1px 20px;"></div>
+				<div style="margin: 1px 20px 5px 20px;"></div>
+			</div>
+		</div>
+		<div style="height: 80px;">
+			<div style="width: 143px; height: 40px; margin: 20px 4px 20px 20px;"></div>
+			<div style="width: 132px; height: 40px; margin: 20px 1px 20px 5px;"></div>
+			<div style="width: 132px; height: 40px; margin: 20px 5px 20px 1px;"></div>
+			<div style="width: 143px; height: 40px; margin: 20px 20px 20px 4px;"></div>
+		</div>
+		<div style="height: 300px;">
+			<div style="width: 143px; height: 260px; margin: 20px 5px 20px 20px; float: left;"></div>
+			<div style="width: 429px; height: 260px; margin: 20px 20px 20px 5px; float: left;">
+				<div style="width: 385px; height: 170px; margin: 20px 20px 10px 20px;"></div>
+				<div style="width: 385px; height: 30px; margin: 10px 20px 20px 20px;"></div>
+			</div>
+		</div>
+		<div style="height: 150px;">
+			<div style="width: 143px; height: 100px; margin: 20px 1px 20px 20px; float: left;">
+				<div style="margin: 5px 20px 1px 20px;"></div>
+				<div style="margin: 1px 20px 5px 20px;"></div>
+			</div>
+			<div style="width: 286px; height: 100px; margin: 20px 1px 20px 1px; float: left;"></div>
+			<div style="width: 143px; height: 100px; margin: 20px 20px 20px 1px; float: left;"></div>
+		</div>
+	</div>
+</body>
+</html>
