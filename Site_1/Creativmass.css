@@ -3,6 +3,7 @@
 	width: 1200px;
 	height: 1900px;
 }
+/* Top Company name*/
 .creative {
   font-size: 42.745px;
   font-family: "Myriad Pro";
@@ -17,7 +18,7 @@
   -ms-transform: matrix( 1.31592978480653,0,0,1.31592978480653,0,0);
   position: absolute;
   left: 494.48px;
-  top: 87.089px;
+  top: 116.089px;
   z-index: 11;
 }
 
@@ -25,15 +26,19 @@
   font-size: 10.417px;
   font-family: "Myriad Pro";
   color: rgb(106, 106, 106);
-  letter-spacing: 0.67em;
+  letter-spacing: 0.4em;
   font-weight: 800;
   line-height: 9.4;
   text-align: left;
+  -moz-transform: matrix( 1.31592978480653,0,0,1.31592978480653,0,0);
+  -webkit-transform: matrix( 1.31592978480653,0,0,1.31592978480653,0,0);
+  -ms-transform: matrix( 1.31592978480653,0,0,1.31592978480653,0,0);
   position: absolute;
-  left: 455.937px;
+  left: 494.937px;
   top: 118.583px;
   z-index: 12;
 }
+/* Top Menu*/
 .WORK {
   font-size: 14px;
   font-family: "Myriad Pro";
@@ -78,6 +83,7 @@
   top: 227.082px;
   z-index: 22;
 }
+/* logo with some lines*/
 .Shape_4 {
   background-image: -moz-linear-gradient( 180deg, rgb(254,212,95) 0%, rgb(216,92,30) 52%, rgb(216,92,30) 100%);
   background-image: -webkit-linear-gradient( 180deg, rgb(254,212,95) 0%, rgb(216,92,30) 52%, rgb(216,92,30) 100%);
@@ -129,6 +135,7 @@
   	height: 171px;
   	z-index: 27;
 }
+/* top-center lines*/
 .center-title {
   font-size: 30px;
   font-family: "Myriad Pro";
@@ -159,6 +166,7 @@
   height: 1px;
   z-index: 54;
 }
+/* 2 arrows*/
 .Shape_7_copy {
   background-image: url("Shape 7 copy.png");
   position: absolute;
@@ -177,7 +185,8 @@
   height: 15px;
   z-index: 52;
 }
-
+/* The part with some pictures (9)*/
+/* Big picture*/
 .Shape_3_copy_4 {
   border-style: solid;
   border-width: 1px;
@@ -200,6 +209,7 @@
   height: 300px;
   z-index: 41;
 }
+/* 1 picture*/
 .Shape_3_copy_3 {
   border-style: solid;
   border-width: 1px;
@@ -222,6 +232,7 @@
   height: 135px;
   z-index: 39;
 }
+/* 2 picture*/
 .Shape_3_copy_2 {
   border-style: solid;
   border-width: 1px;
@@ -244,7 +255,7 @@
   height: 135px;
   z-index: 37;
 }
-
+/* 3 picture*/
 .Shape_3_copy {
   border-style: solid;
   border-width: 1px;
@@ -267,6 +278,7 @@
   height: 135px;
   z-index: 35;
 }
+/* 4 picture*/
 .Shape_3 {
   border-style: solid;
   border-width: 1px;
@@ -289,6 +301,7 @@
   height: 135px;
   z-index: 33;
 }
+/* 5 picture*/
 .Shape_3_copy_9 {
   border-style: solid;
   border-width: 1px;
@@ -311,6 +324,7 @@
   height: 135px;
   z-index: 49;
 }
+/* 6 picture*/
 .Shape_3_copy_8 {
   border-style: solid;
   border-width: 1px;
@@ -333,6 +347,7 @@
   height: 135px;
   z-index: 47;
 }
+/* 7 picture*/
 .Shape_3_copy_7 {
   border-style: solid;
   border-width: 1px;
@@ -355,6 +370,7 @@
   height: 135px;
   z-index: 45;
 }
+/* 8 picture*/
 .Shape_3_copy_6 {
   border-style: solid;
   border-width: 1px;
