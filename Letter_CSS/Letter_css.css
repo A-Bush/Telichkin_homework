@@ -1,8 +1,12 @@
-* {
-	font-family: "Segoe UI"; margin-left: 20px
+body {
+	font-family: "Segoe UI"; 
+	margin-left: 20px
 }
 .Text_head {
-	font-family: "Times New Roman"; font-size: 18pt; font-weight: bold; text-align: center;
+	font-family: "Times New Roman"; 
+	font-size: 18pt; 
+	font-weight: bold; 
+	text-align: center;
 }
 .div {
 	width: 600px 
@@ -23,5 +27,9 @@
 	text-indent: 2em;
 }
 .Font_sz {
-	font-weight: 600; font-size: 16pt;
+	font-weight: 600; 
+	font-size: 16pt;
+}
+ol > li:last-of-type{
+	list-style-type: none;
 }
