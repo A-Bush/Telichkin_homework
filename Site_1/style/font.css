@@ -1,0 +1,19 @@
+@font-face{
+	font-family: mp-regular;
+	src:url(../fonts/MyriadPro-Regular.otf);
+}
+@font-face{
+	font-family: mp-cond;
+	src:url(../fonts/MyriadPro-Cond.otf);
+}
+@font-face{
+	font-family: mp-cond;
+	src:url(../fonts/MyriadPro-CondIt.otf);
+	font-style: italic;
+}
+@font-face{
+	font-family: mp-cond;
+	src:url(../fonts/MyriadPro-BoldCondIt.otf);
+	font-weight: bold;
+	font-style: italic;
+}
