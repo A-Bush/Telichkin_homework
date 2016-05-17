@@ -1,0 +1,84 @@
+body {
+	background: #eee;
+}
+.header {
+	width: 80%;
+	text-align: center;
+	border: 1px solid grey;
+	padding: 15px;
+	margin: 0 auto;
+}
+span {
+	position: relative;
+	left: -30px;
+	font-style: italic;
+	font-size: 16px;
+	color: gray;
+	width: 115%;
+	display: block;
+	border: 1px gray solid;
+	padding: 5px 0;
+	transition: 1s;
+	text-align: center;
+}
+span:hover {
+	transform: rotate(180deg);
+	width: 107%;
+	left: -15px;
+}
+.form {
+	width: 500px;
+	background: url(notebook.png);
+	margin: 100px auto;
+	padding: 20px;
+}
+div {
+
+}
+input {
+	width: 95%;
+	margin: 5px auto;
+	padding: 15px;
+	font-family: 'Arial';
+	font-size: 12px;
+	border-radius: 6px;
+	border: 1px solid grey;
+}
+input:focus {
+	font-style: italic;
+	font-weight: 600;
+	box-shadow: 0px 3px 7px grey inset;
+	outline: none;
+}
+button {
+	margin-top: 15px;
+	width: 101.4%;
+	padding: 15px;
+	background-color: #2493FF;
+	border: none;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	border-radius: 6px;
+	outline: none;
+	transition: all .5s linear;
+}
+button:hover {
+	letter-spacing: 5px;
+	color: #53565b;
+	background: #7cbfff;
+	background: linear-gradient (0deg, white 0%, #7cbfff 50%);
+	border-radius: 8px;
+}
+.go{
+	position: fixed;
+	top: 50px;
+	right: 1px;
+	float: right;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	padding: 5px;
+	border: 1px solid orange;
+}
