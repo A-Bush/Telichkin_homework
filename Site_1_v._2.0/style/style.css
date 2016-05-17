@@ -171,12 +171,12 @@ section.middle {
 	height: 540px;
 	padding: 0;
 	float: left;
-	margin: 0 0 10px 0;
+	margin: 0 0 10px 55px;
 }
 header#middle {
 	width: 100%;
 	padding: 0px;
-	margin: 10px 0 0 55px;
+	margin: 10px 0 0;
 }
 article.middle {
 	border-top-style: solid;
@@ -185,7 +185,7 @@ article.middle {
 	width: 100%;
 	height: 370px;
 	padding: 0px;
-	margin: 0 0 0 55px;
+	margin: 0;
 }
 article.middle div {
 	margin: 0;
