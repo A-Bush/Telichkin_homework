@@ -24,10 +24,11 @@ span {
 span:hover {
 	transform: rotate(180deg);
 	width: 107%;
-	left: -15px;
+	left: -14.5px;
 }
 .form {
 	width: 500px;
+	height: 300px;
 	background: url(notebook.png);
 	margin: 100px auto;
 	padding: 20px;
@@ -52,7 +53,7 @@ input:focus {
 }
 button {
 	margin-top: 15px;
-	width: 101.4%;
+	width: 101%;
 	padding: 15px;
 	background-color: #2493FF;
 	border: none;
