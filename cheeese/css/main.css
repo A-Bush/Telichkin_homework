@@ -225,6 +225,7 @@ a.left_button {
     top: 73px;
     left: -5px;
     z-index: 15;
+    cursor: pointer;
 }
 
 a.right_button {
@@ -236,6 +237,7 @@ a.right_button {
     top: 17px;
     left: 99%;
     z-index: 16;
+    cursor: pointer;
 }
 
 section#form_tasting p.form {
@@ -481,15 +483,36 @@ div.product {
 
 #production a.left_button {
     top: 185px;
+    cursor: pointer;
 }
 
 section#production a.right_button {
     top: 135px;
+    cursor: pointer;
+}
+
+div.arrow_up a {
+    float: right;
+    display: block;
+    filter: opacity(50%);
+    cursor: pointer;
+    margin-right: -100px;
+}
+
+div.arrow_up a {
+    -webkit-filter: opacity(50%);
+}
+
+div.arrow_up a:hover {
+    -webkit-filter: none;
+}
+
+div.arrow_up a:hover {
+    filter: none;
 }
 
 footer {
     background-color: #e2b86a;
-
 }
 
 footer * {
@@ -506,7 +529,7 @@ footer address {
     font-size: 14pt;
 }
 
-footer div.commun p{
+footer div.commun p {
     font-size: 14pt;
     margin-left: 90px;
 }
