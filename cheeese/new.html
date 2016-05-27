@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<style>
+		#map{
+			height: 500px;
+		}
+		#map .col-md-6, #map iframe{
+			padding: 0;
+			height: 100%;
+		}
+		#map iframe{
+			width: 100%;
+			border: none;
+		}
+
+	</style>
+	<script
+	src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+	function initialize() {
+		var mapProp = {
+			center: new google.maps.LatLng(44.482828, 34.155587),
+			zoom: 5,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+	<section id="map">
+		
+		<div class="col-md-6">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.5774716988717!2d34.15338121552486!3d44.48283297910153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4094c84530aa1c6f%3A0x2ec5c0fd7fda127!2zNSDQn9Cw0YDQutC-0LLRi9C5INC_0YAuLCDQr9C70YLQsA!5e0!3m2!1sru!2s!4v1464289978436"
+			allowfullscreen></iframe>
+		</div>
+		<div class="col-md-6" style="background-color:red;"></div>
+		
+	</section>
+
+
+
+</body>
+</html>

@@ -28,7 +28,7 @@
 
 body {
     background: url("../img/background.png") repeat-y;
-    background-size: cover;
+    background-size: contain;
 }
 
 h1, h2, h3 {
@@ -285,9 +285,9 @@ p.customers_job {
 div.customers {
     background-color: #e2b86a;
     padding: 0;
-    margin-left: 5px;
-    height: 100%;
-    width: 33%;
+    /*margin-left: 5px;*/
+    height: 200px;
+
 }
 
 div.customers > img {
@@ -621,4 +621,19 @@ footer div.commun p {
 .carousel-indicators .active {
     background-color: #e2b86a;
 
+}
+.media{
+background-color: #e2b86a;
+background-clip: content-box;
+margin: 0;
+color: white;
+}
+.media-left{
+padding: 10px;
+}
+.media h3, .media p{
+    color:white;
+}
+.media p:first-of-type{
+    font-style: italic;
 }
