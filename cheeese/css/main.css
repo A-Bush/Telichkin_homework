@@ -302,7 +302,12 @@ div.type-cheese {
 #type-cheese div.type-cheese:focus {
     outline-color: transparent;
 }
-
+#type-cheese div.type-cheese img:focus {
+    outline-color: transparent;
+}
+#type-cheese div.type-cheese a:focus {
+    outline-color: transparent;
+}
 #type-cheese div.modal div.container {
     width: 900px;
 }
