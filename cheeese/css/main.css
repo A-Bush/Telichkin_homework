@@ -125,7 +125,7 @@ ul.nav.menu > li > a {
     text-decoration: none;
     background-color: transparent;
     font-family: Engine, sans-serif;
-    font-size: 25pt;
+    font-size: 20pt;
     padding: 0;
 }
 
@@ -719,11 +719,7 @@ footer div.commun p {
     margin-right: -6px;
 }
 
-@media screen and (max-width: 1368px) {
-    .f-nav {
-        padding: 0 160px;
-    }
-}
+
 
 @media screen and (min-width: 1200px) {
     .container {
