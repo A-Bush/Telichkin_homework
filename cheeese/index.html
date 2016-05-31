@@ -11,130 +11,135 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script
-    src="http://maps.googleapis.com/maps/api/js">
-</script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="css/slick.min.js"></script>
-<script type="text/javascript" src="css/slick.js" charset="utf-8"></script>
-<script type="text/javascript">
-    $(document).on('ready', function () {
-        $('.regular').slick({
-            ddots: false,
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
+            src="http://maps.googleapis.com/maps/api/js">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="css/slick.min.js"></script>
+    <script type="text/javascript" src="css/slick.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.regular').slick({
+                ddots: false,
+                infinite: true,
+                slidesToShow: 2 ,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
 
-            ]
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $("#back-top").hide();
-
-        $(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('#back-top').fadeIn();
-                } else {
-                    $('#back-top').fadeOut();
-                }
-            });
-
-            $('#back-top a').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 800);
-                return false;
+                ]
             });
         });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-    });
-</script>
-<script type="text/javascript">
+            $("#back-top").hide();
 
-    $(document).ready(function () {
-        $('.variable-width').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            centerMode: true,
-            variableWidth: true
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+
+                $('#back-top a').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            });
+
         });
-    });
-</script>
-<script type="text/javascript">
-    $(document).on('ready', function () {
-        $('.responsive_2').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [
-            {
-                breakpoint: 1822,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 1379,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 916,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.variable-width').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.responsive_2').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1822,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 1379,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 916,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
                     // You can unslick at a given breakpoint now by adding:
                     // settings: "unslick"
                     // instead of a settings object
-                    ]
-                });
-    });
-</script>
+                ]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var nav = $('.navbar');
 
-<<!-- script type="text/javascript">
-    $(document).ready(function () {
-        var nav = $('.navbar');
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 136) {
-                nav.addClass("f-nav");
-            }
-            else {
-                nav.removeClass("f-nav");
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 136) {
+                    nav.addClass("f-nav");
+                }
+                else {
+                    nav.removeClass("f-nav");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var full, short, size, cheese;
+            full = $('.cheese .fulltext');
+            short = $('.cheese .shorttext');
+            size = 100;
+            for (var i = full.length - 1; i >= 0; i--) {
+                short[i].innerHTML = full[i].innerHTML.slice(0, size) + "... <i>Подробнее</i>";
             }
         });
-    });
-</script> -->
-<script type="text/javascript">
-    $(document).ready(
-        function () {
-
-
-
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
             var elements, size, text, link;
-            link = '<a href="#">далее</a>';
+            link = '<span>далее</span>';
             elements = $('.long');
             text = '';
             size = 100;
@@ -142,7 +147,6 @@
                 text = elements[i].innerHTML;
                 if (text.length > size) {
                     text = text.slice(0, size);
-
                     elements[i].innerHTML = text + ' ... ' + link;
                 }
                 else {
@@ -151,7 +155,6 @@
             }
         });
     </script>
-
     <script>
         function initMap() {
             var point = {lat: 44.482833, lng: 34.1555699};
@@ -171,1546 +174,854 @@
 
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUO-vsvs_PoGZ7Hpe7CFcFiWCXHeDggo&signed_in=true&callback=initMap"></script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaUO-vsvs_PoGZ7Hpe7CFcFiWCXHeDggo&signed_in=true&callback=initMap">
+
+    </script>
 </head>
 <body>
-    <header class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img class="img-responsive hidden-xs" src="img/logo.png" alt="">
-                        <img class="img-responsive visible-xs center-block" src="img/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 visible-lg visible-md">
-                    <h1 class="text-center">
-                        Частная сыроварня, производство благородных фермерских сыров
-                    </h1>
+<header class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img class="img-responsive hidden-xs" src="img/logo.png" alt="">
+                    <img class="img-responsive visible-xs center-block" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 visible-lg visible-md">
+                <h1 class="text-center">
+                    Частная сыроварня, производство благородных фермерских сыров
+                </h1>
 
-                </div>
-                <div class="col-md-3 col-sm-6 text-right hidden-xs">
-                    <p>
-                        <a href="tel:+72345678902">+7&nbsp;(234)&nbsp;567&nbsp;89&nbsp;02</a><br>
-                        <a href="mailto:ferm_product@mail.com">ferm_product@mail.com</a>
-                    </p>
-                    <ul class="list-unstyled list-inline">
-                        <li><a class="social fb-icon" href="#"></a></li>
-                        <li><a class="social vk-icon" href="#"></a></li>
-                        <li><a class="social tw-icon" href="#"></a></li>
-                    </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 text-right hidden-xs">
+                <p>
+                    <a href="tel:+72345678902">+7&nbsp;(234)&nbsp;567&nbsp;89&nbsp;02</a><br>
+                    <a href="mailto:ferm_product@mail.com">ferm_product@mail.com</a>
+                </p>
+                <ul class="list-unstyled list-inline">
+                    <li><a class="social fb-icon" href="#"></a></li>
+                    <li><a class="social vk-icon" href="#"></a></li>
+                    <li><a class="social tw-icon" href="#"></a></li>
+                </ul>
 
+            </div>
+        </div>
+
+
+        <nav class="navbar">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed text-uppercase text-center"
+                        data-toggle="collapse"
+                        data-target="#menu" aria-expanded="false" id="main">
+                    меню
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav menu">
+                    <li><a href="#type-cheese">ВИДЫ СЫРОВ</a></li>
+                    <li><a href="#form_bonus">ПРЕИМУЩЕСТВА И КАЧЕСТВО</a></li>
+                    <li><a href="#price">ПРАЙС</a></li>
+                    <li><a href="#map">КОНТАКТЫ</a></li>
+                    <li><a href="#production">ПРОИЗВОДСТВО</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+        </nav>
+
+    </div>
+</header>
+<section id="mainslider">
+    <div class="container">
+        <div id="slider" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#slider" data-slide-to="0"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+                <li data-target="#slider" data-slide-to="3"></li>
+                <li data-target="#slider" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/slider.jpg" alt="slide1">
+                    <div class="carousel-caption">
+                        <p class="text-uppercase">мы производим натуральный фермерский сыр, благородных сортов</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider_2.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <p class="text-uppercase">сыры варятся из цельного молока в экологически чистом регионе
+                            крыма
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider_3.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <p class="text-uppercase">производим более 40 сортов превосходного качества </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider_4.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <p class="text-uppercase">производим индивидуальную закладку для магазинов и ресторанов
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider_5.jpg" alt="slide2">
+                    <div class="carousel-caption">
+                        <p class="text-uppercase">баллер коровий в прованских травах
+                        </p>
+                    </div>
                 </div>
             </div>
 
-
-            <nav class="navbar">
-
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed text-uppercase text-center"
-                    data-toggle="collapse"
-                    data-target="#menu" aria-expanded="false" id="main">
-                    меню</button>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="nav menu">
-                        <li><a href="#type-cheese">ВИДЫ СЫРОВ</a></li>
-                        <li><a href="#form_bonus">ПРЕИМУЩЕСТВА И КАЧЕСТВО</a></li>
-                        <li><a href="#price">ПРАЙС</a></li>
-                        <li><a href="#map">КОНТАКТЫ</a></li>
-                        <li><a href="#production">ПРОИЗВОДСТВО</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-
-            </nav>
-
+            <!-- Controls -->
+            <a class="left carousel-control" href="#slider" role="button" data-slide="prev"></a>
+            <a class="right carousel-control" href="#slider" role="button" data-slide="next"></a>
         </div>
-    </header>
-    <section id="mainslider">
-        <div class="container">
-            <div id="slider" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li class="active" data-target="#slider" data-slide-to="0"></li>
-                    <li data-target="#slider" data-slide-to="1"></li>
-                    <li data-target="#slider" data-slide-to="2"></li>
-                    <li data-target="#slider" data-slide-to="3"></li>
-                    <li data-target="#slider" data-slide-to="4"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="img/slider.jpg" alt="slide1">
-                        <div class="carousel-caption">
-                            <p class="text-uppercase">мы производим натуральный фермерский сыр, благородных сортов</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/slider_2.jpg" alt="slide2">
-                        <div class="carousel-caption">
-                            <p class="text-uppercase">сыры варятся из цельного молока в экологически чистом регионе
-                                крыма
-                            </p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/slider_3.jpg" alt="slide2">
-                        <div class="carousel-caption">
-                            <p class="text-uppercase">производим более 40 сортов превосходного качества </p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/slider_4.jpg" alt="slide2">
-                        <div class="carousel-caption">
-                            <p class="text-uppercase">производим индивидуальную закладку для магазинов и ресторанов
-                            </p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="img/slider_5.jpg" alt="slide2">
-                        <div class="carousel-caption">
-                            <p class="text-uppercase">баллер коровий в прованских травах
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#slider" role="button" data-slide="prev"></a>
-                <a class="right carousel-control" href="#slider" role="button" data-slide="next"></a>
+    </div>
+</section>
+<section id="form_order">
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="form text-uppercase text-center">оформите заказ</h2>
+            <p class="form text-center">Мы предлагаем Вам заказать любой понравившийся Вам сыр из нашей сырной
+                коллекции.
+            </p>
+        </div>
+        <form class="form-inline">
+            <div class="form-group col-sm-4">
+                <input type="text" class="form-control" id="name_form_order" placeholder="Введите имя">
             </div>
-        </div>
-    </section>
-    <section id="form_order">
-        <div class="container">
-            <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="form text-uppercase text-center">оформите заказ</h2>
-                <p class="form text-center">Мы предлагаем Вам заказать любой понравившийся Вам сыр из нашей сырной коллекции.
+            <div class="form-group col-sm-4">
+                <input type="email" class="form-control" id="email_form_order" placeholder="Введите e-mail">
+            </div>
+            <div class="form-group col-sm-4">
+                <input type="tel" class="form-control" id="telephone_form_order" placeholder="Введите телефон">
+            </div>
+            <br>
+            <div class="col-sm-2 col-sm-offset-5 submit">
+                <button type="submit" class="btn btn-default text-uppercase submit">Заказать</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section id="type-cheese">
+    <h2 class="type_cheese text-uppercase text-center">виды сыров</h2>
+    <h3 class="white_cheese text-uppercase text-center">БЕЛАЯ ПЛЕСЕНЬ</h3>
+    <div class="regular slider">
+        <div class="cheese" data-cheese="cheese_1">
+            <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_1">
+                <img src="img/white_cheese_1.png" alt="white_cheese_1">
+                <h3 class="cheese_name">Козий и Коровий бриз</h3>
+                <p class="shorttext">
                 </p>
             </div>
-            <form class="form-inline">
-                <div class="form-group col-sm-4">
-                    <input type="text" class="form-control" id="InputName" placeholder="Введите имя">
-                </div>
-                <div class="form-group col-sm-4">
-                    <input type="email" class="form-control" id="InputEmail" placeholder="Введите e-mail">
-                </div>
-                <div class="form-group col-sm-4">
-                    <input type="tel" class="form-control" id="InputTelephone" placeholder="Введите телефон">
-                </div>
-                <br>
-                <div class="col-sm-2 col-sm-offset-5 submit">
-                    <button type="submit" class="btn btn-default text-uppercase submit">Заказать</button>
-                </div>
-            </form>
         </div>
-    </section>
-    <section id="type-cheese">
-        <div>
-
-            <h2 class="type_cheese text-uppercase text-center">виды сыров</h2>
-            <h3 class="white_cheese text-uppercase text-center">БЕЛАЯ ПЛЕСЕНЬ</h3>
-            <div class="regular slider">
-                <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_1">
-                    <img src="img/white_cheese_1.png" alt="White_cheese_1">
-                    <h3 class="cheese_name">Козий и Коровий бри</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-
-                <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_2">
-                    <a href="#"><img src="img/white_cheese_2.png" alt="White_cheese_2"></a>
-                    <h3 class="cheese_name">Сэнт Мор</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_3">
-                    <a href="#"> <img src="img/white_cheese_3.png" alt="White_cheese_3"></a>
-                    <h3 class="cheese_name">Кроттен</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_4">
-                    <a href="#"> <img src="img/white_cheese_3.png" alt="White_cheese_3"></a>
-                    <h3 class="cheese_name">????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
+        <div class="cheese" data-cheese="cheese_2">
+            <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_2">
+                <img src="img/white_cheese_2.png" alt="White_cheese_2">
+                <h3 class="cheese_name">Сэнт Мор</h3>
+                <p class="shorttext">
+                </p>
             </div>
-            <h3 class="blue_cheese text-uppercase text-center">голубая плесень</h3>
-            <div class="regular slider">
-                <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_1">
-                    <a href="#"> <img src="img/blue_cheese_1.png" alt="Blue_cheese_1"></a>
-                    <h3 class="cheese_name">Карбанзолла</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_2">
-                    <a href="#"> <img src="img/blue_cheese_2.png" alt="Blue_cheese_2"></a>
-                    <h3 class="cheese_name">???????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_3">
-                    <a href="#"> <img src="img/blue_cheese_2.png" alt="Blue_cheese_2"></a>
-                    <h3 class="cheese_name">???????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
+        </div>
+        <div class="cheese" data-cheese="cheese_3">
+            <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_3">
+                <img src="img/white_cheese_3.png" alt="White_cheese_3">
+                <h3 class="cheese_name">Кроттен</h3>
+                <p class="shorttext">
+                </p>
             </div>
-            <h3 class="text-uppercase text-center">выдержанные сыры</h3>
-            <div class="regular slider">
-                <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_1">
-                    <a href="#"> <img src="img/extra_cheese_1.png" alt="Extra_cheese_1"></a>
-                    <h3 class="cheese_name">Пьяная коза</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_2">
-                    <a href="#"> <img src="img/extra_cheese_2.png" alt="Extra_cheese_2"></a>
-                    <h3 class="cheese_name">?????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_3">
-                    <a href="#"> <img src="img/extra_cheese_3.png" alt="Extra_cheese_3"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_4">
-                    <a href="#"> <img src="img/extra_cheese_3.png" alt="Extra_cheese_3"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
+        </div>
+        <div class="cheese" data-cheese="cheese_4">
+            <div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_4">
+                <img src="img/white_cheese_3.png" alt="White_cheese_3">
+                <h3 class="cheese_name">????????</h3>
+                <p class="shorttext">
+                </p>
             </div>
-            <h3 class="text-uppercase text-center">выдержанные сыры с добавками </h3>
-            <div class="regular slider">
-                <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_1">
-                    <a href="#"> <img src="img/Super_extra_cheese_1.png" alt="Super_extra_cheese_1"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_2">
-                    <a href="#"> <img src="img/Super_extra_cheese_2.png" alt="Super_extra_cheese_2"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_3">
-                    <a href="#"> <img src="img/Super_extra_cheese_3.png" alt="Super_extra_cheese_3"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-                <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_4">
-                    <a href="#"> <img src="img/Super_extra_cheese_3.png" alt="Super_extra_cheese_3"></a>
-                    <h3 class="cheese_name">??????????</h3>
-                    <p class="long">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam sapiente unde
-                    </p>
-                </div>
-            </div>
-            <div class="modal fade white-cheese-modal_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">Козий и Коровий бри</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade white-cheese-modal_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">Сэнт Мор</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade white-cheese-modal_3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">Кроттен</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade white-cheese-modal_4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade blue-cheese-modal_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">Карбанзолла</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade blue-cheese-modal_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">???????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade blue-cheese-modal_3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">??????????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade extra-cheese-modal_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">Пьяная коза</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade extra-cheese-modal_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">???????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade extra-cheese-modal_3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">???????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade extra-cheese-modal_4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="container">
-                            <div class="col-xs-5 col-sm-7 bg_image">
-
-                            </div>
-                            <div class="col-xs-7 col-sm-5">
-                                <div>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-
-                                </div>
-                                <h3 class="cheese_name">????????????</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                    officia
-                                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                    ipsam
-                                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                    quod,
-                                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                                </p>
-                                <form class="form-horizontal only_long">
-                                    <div class="col-xs-5 col-md-12">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="text" class="form-control" id="InputName"
-                                                placeholder="Введите имя">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="email" class="form-control" id="InputEmail"
-                                                placeholder="Введите e-mail">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <input type="tel" class="form-control" id="InputTelephone"
-                                                placeholder="Введите телефон">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 submit ">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-12 only_short">
-                                <form class="form-horizontal">
-                                    <div class="col-xs-12">
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-
-                                        </div>
-                                        <div class="form-group col-xs-12 col-sm-6">
-
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-
-                                        </div>
-                                        <div class="col-xs-2 submit">
-                                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal fade super-extra-cheese-modal_1" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel">
+        </div>
+    </div>
+    <div class="cheese">
+        <div class=" modal fade white-cheese-modal_1" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="container">
-                        <div class="col-xs-5 col-sm-7 bg_image">
-
-                        </div>
-                        <div class="col-xs-7 col-sm-5">
-                            <div>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
                             </div>
-                            <h3 class="cheese_name">????????????</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                                officia
-                                quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                                ipsam
-                                itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                                quod,
-                                quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                            </p>
-                            <form class="form-horizontal only_long">
-                                <div class="col-xs-5 col-md-12">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <input type="text" class="form-control" id="InputName"
-                                            placeholder="Введите имя">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <input type="email" class="form-control" id="InputEmail"
-                                            placeholder="Введите e-mail">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <input type="tel" class="form-control" id="InputTelephone"
-                                            placeholder="Введите телефон">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 submit ">
-                                    <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-xs-12 only_short">
-                            <form class="form-horizontal">
-                                <div class="col-xs-12">
-                                    <div class="form-group col-xs-12 col-sm-6">
-
-                                        <input type="text" class="form-control" id="InputName"
-                                        placeholder="Введите имя">
-
-                                    </div>
-                                    <div class="form-group col-xs-12 col-sm-6">
-
-                                        <input type="email" class="form-control" id="InputEmail"
-                                        placeholder="Введите e-mail">
-
-                                    </div>
-                                    <div class="form-group col-xs-12 col-sm-6">
-
-                                        <input type="tel" class="form-control" id="InputTelephone"
-                                        placeholder="Введите телефон">
-
-                                    </div>
-                                    <div class="col-xs-2 submit">
-                                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="modal fade super-extra-cheese-modal_2" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="col-xs-5 col-sm-7 bg_image">
-
-                    </div>
-                    <div class="col-xs-7 col-sm-5">
-                        <div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-
-                        </div>
-                        <h3 class="cheese_name">??????????????</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                            officia
-                            quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                            ipsam
-                            itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                            quod,
-                            quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                        </p>
-                        <form class="form-horizontal only_long">
-                            <div class="col-xs-5 col-md-12">
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" id="InputName"
-                                        placeholder="Введите имя">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <input type="email" class="form-control" id="InputEmail"
-                                        placeholder="Введите e-mail">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <input type="tel" class="form-control" id="InputTelephone"
-                                        placeholder="Введите телефон">
-                                    </div>
-                                </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_cheese_1"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email__cheese_1"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_cheese_1"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
                             </div>
-                            <div class="col-sm-2 submit ">
-                                <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xs-12 only_short">
-                        <form class="form-horizontal">
-                            <div class="col-xs-12">
-                                <div class="form-group col-xs-12 col-sm-6">
-
-                                    <input type="text" class="form-control" id="InputName"
-                                    placeholder="Введите имя">
-
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-6">
-
-                                    <input type="email" class="form-control" id="InputEmail"
-                                    placeholder="Введите e-mail">
-
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-6">
-
-                                    <input type="tel" class="form-control" id="InputTelephone"
-                                    placeholder="Введите телефон">
-
-                                </div>
-                                <div class="col-xs-2 submit">
-                                    <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                    </button>
-                                </div>
-                            </div>
-
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="modal fade super-extra-cheese-modal_3" tabindex="-1" role="dialog"
-    aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="container">
-                <div class="col-xs-5 col-sm-7 bg_image">
-
-                </div>
-                <div class="col-xs-7 col-sm-5">
-                    <div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-
+        <div class="modal fade white-cheese-modal_2" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_cheese_2"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email__cheese_2"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_cheese_2"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="cheese_name">?????????????????</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                        officia
-                        quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                        ipsam
-                        itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                        quod,
-                        quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-                    </p>
-                    <form class="form-horizontal only_long">
-                        <div class="col-xs-5 col-md-12">
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" id="InputName"
-                                    placeholder="Введите имя">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="email" class="form-control" id="InputEmail"
-                                    placeholder="Введите e-mail">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <input type="tel" class="form-control" id="InputTelephone"
-                                    placeholder="Введите телефон">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-2 submit ">
-                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                            </button>
-                        </div>
-                    </form>
                 </div>
-                <div class="col-xs-12 only_short">
-                    <form class="form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="form-group col-xs-12 col-sm-6">
-
-                                <input type="text" class="form-control" id="InputName"
-                                placeholder="Введите имя">
-
+            </div>
+        </div>
+        <div class=" modal fade white-cheese-modal_3" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
                             </div>
-                            <div class="form-group col-xs-12 col-sm-6">
-
-                                <input type="email" class="form-control" id="InputEmail"
-                                placeholder="Введите e-mail">
-
-                            </div>
-                            <div class="form-group col-xs-12 col-sm-6">
-
-                                <input type="tel" class="form-control" id="InputTelephone"
-                                placeholder="Введите телефон">
-
-                            </div>
-                            <div class="col-xs-2 submit">
-                                <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                                </button>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_cheese_3"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email__cheese_3"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_cheese_3"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
                             </div>
                         </div>
-
-                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade white-cheese-modal_4" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_cheese_4"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email__cheese_4"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_cheese_4"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-</div>
-<div class="modal fade super-extra-cheese-modal_4" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="container">
-            <div class="col-xs-5 col-sm-7 bg_image">
-
-            </div>
-            <div class="col-xs-7 col-sm-5">
-                <div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-
-                </div>
-                <h3 class="cheese_name">?????????????????</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-                    officia
-                    quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-                    ipsam
-                    itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-                    quod,
-                    quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
+    <h3 class="blue_cheese text-uppercase text-center">голубая плесень</h3>
+    <div class="regular slider">
+        <div class="cheese" data-cheese="blue_cheese_1">
+            <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_1">
+                <img src="img/blue_cheese_1.png" alt="Blue_cheese_1">
+                <h3 class="cheese_name">Карбанзолла</h3>
+                <p class="shorttext">
                 </p>
-                <form class="form-horizontal only_long">
-                    <div class="col-xs-5 col-md-12">
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <input type="text" class="form-control" id="InputName"
-                                placeholder="Введите имя">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <input type="email" class="form-control" id="InputEmail"
-                                placeholder="Введите e-mail">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <input type="tel" class="form-control" id="InputTelephone"
-                                placeholder="Введите телефон">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 submit ">
-                        <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                        </button>
-                    </div>
-                </form>
             </div>
-            <div class="col-xs-12 only_short">
-                <form class="form-horizontal">
-                    <div class="col-xs-12">
-                        <div class="form-group col-xs-12 col-sm-6">
-
-                            <input type="text" class="form-control" id="InputName"
-                            placeholder="Введите имя">
-
-                        </div>
-                        <div class="form-group col-xs-12 col-sm-6">
-
-                            <input type="email" class="form-control" id="InputEmail"
-                            placeholder="Введите e-mail">
-
-                        </div>
-                        <div class="form-group col-xs-12 col-sm-6">
-
-                            <input type="tel" class="form-control" id="InputTelephone"
-                            placeholder="Введите телефон">
-
-                        </div>
-                        <div class="col-xs-2 submit">
-                            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
-                            </button>
-                        </div>
-                    </div>
-
-                </form>
+        </div>
+        <div class="cheese" data-cheese="blue_cheese_2">
+            <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_2">
+                <img src="img/blue_cheese_2.png" alt="Blue_cheese_2">
+                <h3 class="cheese_name">???????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="blue_cheese_3">
+            <div class="type-cheese" data-toggle="modal" data-target=".blue-cheese-modal_3">
+                <img src="img/blue_cheese_2.png" alt="Blue_cheese_2">
+                <h3 class="cheese_name">???????</h3>
+                <p class="shorttext">
+                </p>
             </div>
         </div>
     </div>
-
-</div>
-</div>
-</div>
+    <div class="cheese">
+        <div class=" modal fade blue-cheese-modal_1" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_blue_cheese_1"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_blue_cheese_1"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_blue_cheese_1"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade blue-cheese-modal_2" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_blue_cheese_2"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_blue_cheese_2"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_blue_cheese_2"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade blue-cheese-modal_3" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_blue_cheese_3"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_blue_cheese_3"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_blue_cheese_3"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="text-uppercase text-center">выдержанные сыры</h3>
+    <div class="regular slider">
+        <div class="cheese" data-cheese="extra_cheese_1">
+            <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_1">
+                <img src="img/extra_cheese_1.png" alt="Extra_cheese_1">
+                <h3 class="cheese_name">Пьяная коза</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="extra_cheese_2">
+            <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_2">
+                <img src="img/extra_cheese_2.png" alt="Extra_cheese_2">
+                <h3 class="cheese_name">?????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="extra_cheese_3">
+            <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_3">
+                <img src="img/extra_cheese_3.png" alt="Extra_cheese_3">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="extra_cheese_4">
+            <div class="type-cheese" data-toggle="modal" data-target=".extra-cheese-modal_4">
+                <img src="img/extra_cheese_3.png" alt="Extra_cheese_3">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="cheese">
+        <div class=" modal fade extra-cheese-modal_1" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_extra_cheese_1"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_extra_cheese_1"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_extra_cheese_1"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade extra-cheese-modal_2" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_extra_cheese_2"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_extra_cheese_2"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_extra_cheese_2"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade extra-cheese-modal_3" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_extra_cheese_3"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_extra_cheese_3"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_extra_cheese_3"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade extra-cheese-modal_4" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_extra_cheese_4"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_extra_cheese_4"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_extra_cheese_4"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="text-uppercase text-center">выдержанные сыры с добавками </h3>
+    <div class="regular slider">
+        <div class="cheese" data-cheese="super_extra_cheese_1">
+            <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_1">
+                <img src="img/super_extra_cheese_1.png" alt="Super_extra_cheese_1">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="super_extra_cheese_2">
+            <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_2">
+                <img src="img/super_extra_cheese_2.png" alt="Super_extra_cheese_2">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="super_extra_cheese_3">
+            <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_3">
+                <img src="img/super_extra_cheese_3.png" alt="Super_extra_cheese_3">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+        <div class="cheese" data-cheese="super_extra_cheese_4">
+            <div class="type-cheese" data-toggle="modal" data-target=".super-extra-cheese-modal_4">
+                <img src="img/super_extra_cheese_3.png" alt="Super_extra_cheese_3">
+                <h3 class="cheese_name">??????????</h3>
+                <p class="shorttext">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="cheese">
+        <div class=" modal fade super_extra-cheese-modal_1" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_super_extra_cheese_1"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_super_extra_cheese_1"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_super_extra_cheese_1"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade super_extra-cheese-modal_2" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_super_extra_cheese_2"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_super_extra_cheese_2"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_super_extra_cheese_2"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade super_extra-cheese-modal_3" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_super_extra_cheese_3"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_super_extra_cheese_3"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_super_extra_cheese_3"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" modal fade super_extra-cheese-modal_4" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <div class="col-md-8">
+                                <img src="img/big_cheese.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Cheese Label</h3>
+                                <p class="fulltext">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime.
+                                    Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro
+                                    dicta
+                                    voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut
+                                    vero
+                                    error tempore commodi amet tempora reiciendis consequatur ratione! Error
+                                    minus
+                                    libero perferendis unde quos illo ut, similique.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <input type="text" class="form-control" id="name_super_extra_cheese_4"
+                                           placeholder="Введите имя">
+                                    <input type="email" class="form-control" id="email_super_extra_cheese_4"
+                                           placeholder="Введите e-mail">
+                                    <input type="tel" class="form-control" id="telephone_super_extra_cheese_4"
+                                           placeholder="Введите телефон">
+                                    <button type="submit" class="btn btn-default">ЗАКАЗАТЬ</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section id="form_tasting">
     <div class="container">
@@ -1718,45 +1029,45 @@ aria-labelledby="myLargeModalLabel">
             <h2 class="form text-uppercase text-center">Заказать дегустационный сет</h2>
             <p class="form text-center">Мы предлагаем заказать дегустационный сет с набором сыров
                 нашего производства, что поможет Вам определиться с выбором.</p>
-            </div>
-            <form class="form-inline">
-                <div class="form-group col-sm-4">
-                    <input type="text" class="form-control" id="InputName" placeholder="Введите имя">
-                </div>
-                <div class="form-group col-sm-4">
-                    <input type="email" class="form-control" id="InputEmail" placeholder="Введите e-mail">
-                </div>
-                <div class="form-group col-sm-4">
-                    <input type="tel" class="form-control" id="InputTelephone" placeholder="Введите телефон">
-                </div>
-                <br>
-                <div class="col-sm-2 col-sm-offset-5 submit ">
-                    <button type="submit" class="btn btn-default text-uppercase submit">Заказать</button>
-                </div>
-            </form>
         </div>
-    </section>
-    <section id="certificates">
-        <h2 class="text-uppercase text-center">КАЧЕСТВО И СЕРТИФИКАТЫ</h2>
-        <div class="variable-width slider">
-            <div class="certificate" data-toggle="modal" data-target=".certificate-modal-1">
-                <a href="#"><img src="img/Cert_1.png" alt="Certeficate_1"></a>
+        <form class="form-inline">
+            <div class="form-group col-sm-4">
+                <input type="text" class="form-control" id="name_form_tasting" placeholder="Введите имя">
             </div>
-            <div class="certificate" data-toggle="modal" data-target=".certificate-modal-2">
-                <a href="#"><img src="img/Cert_2.png" alt="Certeficate_2"></a>
+            <div class="form-group col-sm-4">
+                <input type="email" class="form-control" id="email_form_tasting" placeholder="Введите e-mail">
             </div>
-            <div class="certificate" data-toggle="modal" data-target=".certificate-modal-4">
-                <a href="#"><img src="img/Cert_4.png" alt="Certeficate_4"></a>
+            <div class="form-group col-sm-4">
+                <input type="tel" class="form-control" id="telephone_form_tasting" placeholder="Введите телефон">
             </div>
-            <div class="certificate" data-toggle="modal" data-target=".certificate-modal-5">
-                <a href="#"><img src="img/Cert_5.png" alt="Certeficate_5"></a>
+            <br>
+            <div class="col-sm-2 col-sm-offset-5 submit ">
+                <button type="submit" class="btn btn-default text-uppercase submit">Заказать</button>
             </div>
-            <div class="certificate" data-toggle="modal" data-target=".certificate-modal-3">
-                <a href="#"><img src="img/Cert_3.png" alt="Certeficate_3"></a>
-            </div>
+        </form>
+    </div>
+</section>
+<section id="certificates">
+    <h2 class="text-uppercase text-center">КАЧЕСТВО И СЕРТИФИКАТЫ</h2>
+    <div class="variable-width slider">
+        <div class="certificate" data-toggle="modal" data-target=".certificate-modal-1">
+            <a href="#"><img src="img/Cert_1.png" alt="Certeficate_1"></a>
         </div>
-        <div id="myModal" class="modal fade certificate-modal-1" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel">
+        <div class="certificate" data-toggle="modal" data-target=".certificate-modal-2">
+            <a href="#"><img src="img/Cert_2.png" alt="Certeficate_2"></a>
+        </div>
+        <div class="certificate" data-toggle="modal" data-target=".certificate-modal-4">
+            <a href="#"><img src="img/Cert_4.png" alt="Certeficate_4"></a>
+        </div>
+        <div class="certificate" data-toggle="modal" data-target=".certificate-modal-5">
+            <a href="#"><img src="img/Cert_5.png" alt="Certeficate_5"></a>
+        </div>
+        <div class="certificate" data-toggle="modal" data-target=".certificate-modal-3">
+            <a href="#"><img src="img/Cert_3.png" alt="Certeficate_3"></a>
+        </div>
+    </div>
+    <div class="modal fade certificate-modal-1" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="container">
@@ -1768,58 +1079,58 @@ aria-labelledby="myLargeModalLabel">
             </div>
         </div>
     </div>
-    <div id="myModal" class="modal fade certificate-modal-2" tabindex="-1" role="dialog"
-    aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="container">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="bg_image"></div>
+    <div class="modal fade certificate-modal-2" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="bg_image"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div id="myModal" class="modal fade certificate-modal-3" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="container">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="bg_image"></div>
+    <div class="modal fade certificate-modal-3" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="bg_image"></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-<div id="myModal" class="modal fade certificate-modal-4" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="container">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="bg_image"></div>
+    <div class="modal fade certificate-modal-4" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="bg_image"></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-<div id="myModal" class="modal fade certificate-modal-5" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="container">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="bg_image"></div>
+    <div class="modal fade certificate-modal-5" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="bg_image"></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </section>
 <section id="customers">
     <a href="#"><h2 class="text-center text-uppercase">НАШИ ПОКУПАТЕЛИ О НАС </h2></a>
@@ -1873,13 +1184,13 @@ aria-labelledby="myLargeModalLabel">
         </div>
         <form class="form-inline">
             <div class="form-group col-sm-4">
-                <input type="text" class="form-control" id="InputName" placeholder="Введите имя">
+                <input type="text" class="form-control" id="name_form_bonus" placeholder="Введите имя">
             </div>
             <div class="form-group col-sm-4">
-                <input type="email" class="form-control" id="InputEmail" placeholder="Введите e-mail">
+                <input type="email" class="form-control" id="email_form_bonus" placeholder="Введите e-mail">
             </div>
             <div class="form-group col-sm-4">
-                <input type="tel" class="form-control" id="InputTelephone" placeholder="Введите телефон">
+                <input type="tel" class="form-control" id="telephone_form_bonus" placeholder="Введите телефон">
             </div>
             <br>
             <div class="col-sm-2 col-sm-offset-5 submit ">
@@ -1994,8 +1305,8 @@ aria-labelledby="myLargeModalLabel">
 </section>
 <section id="map">
     <div class="col-md-6">
-        <div id="mmm"></div>  
-    </div>  
+        <div id="mmm"></div>
+    </div>
     <div class="col-md-6">
         <div class="container contacts">
             <h2>Контакты</h2>
@@ -2024,7 +1335,7 @@ aria-labelledby="myLargeModalLabel">
                     <div class="form-group">
                         <div class="col-md-7">
                             <input type="tel" class="form-control" id="InputTelephone"
-                            placeholder="Введите телефон">
+                                   placeholder="Введите телефон">
                         </div>
                     </div>
                 </div>
@@ -2076,7 +1387,7 @@ aria-labelledby="myLargeModalLabel">
 <section id="button_up">
     <div class="class">
         <div id="back-top">
-            <a href="#top"><span></span></a>
+            <a href="#"><span></span></a>
         </div>
     </div>
 </section>

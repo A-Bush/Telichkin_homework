@@ -1,156 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script>
-		$(function (){
-			var full, short, size, cheese;
-			full = $('.cheese .fulltext');
-			short = $('.cheese .shorttext');
-			size = 100;
-			for (var i = full.length - 1; i >= 0; i--) {
-				short[i].innerHTML = full[i].innerHTML.slice(0, size) + "... <i>далее</i>";
-			}
-		});
-	</script>
-	
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
 </head>
+<script>
+    $(function () {
+        if ($('.ta').length) {
+            blok_height = Number($('.ta').css('height').replace('px', ''));
+            if (blok_height > 80) {
+                $('.ta').css('max-height', '80px');
+                $('.read-next').show();
+            }
+        }
+    });
+    $('.read-next').live('click', function () {
+        if ($('#ta').css('max-height') != 'none') {
+            $('#ta').css('max-height', '');
+            $(this).text('Скрыть');
+        } else {
+            $('#ta').css('max-height', '80px');
+            $(this).text('Читать далее...');
+        }
+        return false;
+    });
+</script>
 <body>
-	<section id="type-cheese">
-		<div class="cheese" data-cheese="cheese_1">
-			<div class="type-cheese" data-toggle="modal" data-target=".white-cheese-modal_1">
-				<img src="img/Super_extra_cheese_3.png" alt="Super_extra_cheese_3">
-				<h3 class="cheese_name">??????????</h3>
-				<p class="shorttext">
-					
-				</p>
-			</div>
+<div style="height:100%">
+
+    <div id="ta" style="overflow:hidden">
+        Ребята! Очень надеюсь на Вашу помощь! <br/>
+        Имеется большой кусок текста с html-тегами. Как сделать так, <br/>
+        чтоб была видна только его верхняя часть (в пределах 80px), <br/>
+        а остальная часть появлялась при нажатии на <br/>
+        у "Ч <br/>
+        итать далее..." (без перезагрузки страницы). <br/>
+
+        Находил несколько решений, но к сожалению не <br/>
+
+        одно из них не подошло, <br/>
 
 
+        <br/>
 
-			<div class="modal fade white-cheese-modal_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content">
-						<div class="modal-body">
-							<div class="row">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<div class="col-md-8">
-									<img src="img/big_cheese.png" alt="">
-								</div>
-								<div class="col-md-4">
-									<h3>Cheese Label</h3>
-									<p class="fulltext">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eum, maxime. Laboriosam minima sequi quos quisquam nobis vitae ut cupiditate ab porro dicta voluptas, suscipit necessitatibus, aperiam animi, magnam sapiente ullam aut vero error tempore commodi amet tempora reiciendis consequatur ratione! Error minus libero perferendis unde quos illo ut, similique.
-									</p>
-									<form action="" class="modal-form">
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-										<button type="submit" class="btn btn-default">Submit</button>
-  
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>	
-	</section>
+        ся наличие двух частей - то что должно б <br/>
+
+        ыть отображено и то, что должно быть скрыто. <br/>
+
+        Самый подходящий вариант который был найден выглядет следующим образом: <br/>
+
+        <br/>
+
+        Можно ли в этом примере сделать чтобы "Читать далее" Н <br/>
+
+        е отображалась если текст помещается в 80px, а также если он уже был раскрыт? <br/>
+
+        И самое главное как сделать автоуменьшение блока, если <br/>
+        текст занимает меньше чем 80px? <br/>
+        Возможно это уже здесь где-то обсуждалось, но я к сожалению не смог найти... <br/>
+    </div>
+    <a class="read-next" style="display:none;" href="#">Читать далее...</a>
+</div>
 </body>
 </html>
 
 
+<!-- <div class="col-xs-5 col-sm-7 bg_image">
 
+</div>
+<div class="col-xs-7 col-sm-5">
+    <div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
 
-							<!-- <div class="col-xs-5 col-sm-7 bg_image">
+    </div>
+    <h3 class="cheese_name">Козий и Коровий бри</h3>
+    <p class="fulltext">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
+        officia
+        quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
+        ipsam
+        itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
+        quod,
+        quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
+    </p>
+    <form class="form-horizontal only_long">
+        <div class="col-xs-5 col-md-12">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" id="InputName"
+                    placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="email" class="form-control" id="InputEmail"
+                    placeholder="Введите e-mail">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="tel" class="form-control" id="InputTelephone"
+                    placeholder="Введите телефон">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 submit ">
+            <button type="submit" class="btn btn-default text-uppercase submit">Отправить
+            </button>
+        </div>
+    </form>
+</div>
+<div class="col-xs-12 only_short">
+    <form class="form-horizontal">
+        <div class="col-xs-12">
+            <div class="form-group col-xs-12 col-sm-6">
 
-							</div>
-							<div class="col-xs-7 col-sm-5">
-								<div>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
+                <input type="text" class="form-control" id="InputName"
+                placeholder="Введите имя">
 
-								</div>
-								<h3 class="cheese_name">Козий и Коровий бри</h3>
-								<p class="fulltext">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos est iusto nemo
-									officia
-									quidem, vero. Aliquam architecto commodi cum dicta dolore error, expedita facere illo
-									ipsam
-									itaque iure labore molestias nihil nisi odit placeat quae quaerat quasi quia quisquam
-									quod,
-									quos ratione recusandae reprehenderit sunt vitae voluptatum? Laudantium, reiciendis!
-								</p>
-								<form class="form-horizontal only_long">
-									<div class="col-xs-5 col-md-12">
-										<div class="form-group">
-											<div class="col-md-12">
-												<input type="text" class="form-control" id="InputName"
-												placeholder="Введите имя">
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="col-md-12">
-												<input type="email" class="form-control" id="InputEmail"
-												placeholder="Введите e-mail">
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="col-md-12">
-												<input type="tel" class="form-control" id="InputTelephone"
-												placeholder="Введите телефон">
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-2 submit ">
-										<button type="submit" class="btn btn-default text-uppercase submit">Отправить
-										</button>
-									</div>
-								</form>
-							</div>
-							<div class="col-xs-12 only_short">
-								<form class="form-horizontal">
-									<div class="col-xs-12">
-										<div class="form-group col-xs-12 col-sm-6">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
 
-											<input type="text" class="form-control" id="InputName"
-											placeholder="Введите имя">
+                <input type="email" class="form-control" id="InputEmail"
+                placeholder="Введите e-mail">
 
-										</div>
-										<div class="form-group col-xs-12 col-sm-6">
+            </div>
+            <div class="form-group col-xs-12 col-sm-6">
 
-											<input type="email" class="form-control" id="InputEmail"
-											placeholder="Введите e-mail">
+                <input type="tel" class="form-control" id="InputTelephone"
+                placeholder="Введите телефон">
 
-										</div>
-										<div class="form-group col-xs-12 col-sm-6">
+            </div>
+            <div class="col-xs-2 submit">
+                <button type="submit" class="btn btn-default text-uppercase submit">Отправить
+                </button>
+            </div>
+        </div>
 
-											<input type="tel" class="form-control" id="InputTelephone"
-											placeholder="Введите телефон">
+    </form>
+</div>
+</div>
+</div>
 
-										</div>
-										<div class="col-xs-2 submit">
-											<button type="submit" class="btn btn-default text-uppercase submit">Отправить
-											</button>
-										</div>
-									</div>
-
-								</form>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div> -->
+</div>
+</div>
+</div> -->
 
 
 

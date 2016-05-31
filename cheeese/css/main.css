@@ -91,7 +91,7 @@ header ul {
 
 .social:hover {
     background-size: contain;
-    background-position: 0px 0px;
+    background-position: 0 0;
 
 }
 
@@ -133,6 +133,57 @@ ul.nav.menu > li > a:hover {
     text-decoration: underline;
 }
 
+#main {
+    font-family: Engine, sans-serif;
+    font-size: 25pt;
+    float: none;
+    width: 100%;
+}
+
+.left.carousel-control {
+    background: url("../img/left.png") no-repeat;
+    background-position-y: 50%;
+    background-position-x: 10%;
+
+}
+
+.right.carousel-control {
+    background: url("../img/right.png") no-repeat;
+    background-position-y: 50%;
+    background-position-x: 90%;
+}
+
+.carousel-caption {
+    background-color: rgba(224, 186, 106, 0.5);
+}
+
+.carousel-caption > p {
+    color: #fff;
+    font-family: Engine, sans-serif;
+    font-size: 30pt;
+}
+
+.carousel-indicators {
+    width: 99%;
+    left: 0;
+    margin-left: 0;
+    text-align: right;
+}
+
+.carousel-indicators li {
+    border-color: #e2b86a;
+}
+
+.carousel-indicators .active {
+    background-color: #e2b86a;
+
+}
+
+.class {
+    width: 400px;
+    margin: 0 auto;
+}
+
 .f-nav {
     z-index: 100;
     background-color: #e2b86a;
@@ -158,7 +209,7 @@ ul.nav.menu > li > a:hover {
 
 .slick-next:hover::before {
     background: url("../img/right_active.png") no-repeat;
-    right: 0px;
+    right: 0;
 }
 
 .slick-prev:hover::before {
@@ -233,7 +284,7 @@ form.form-inline input::-webkit-input-placeholder {
 }
 
 .slick-slide {
-    margin: 0px 20px;
+    margin: 0 20px;
 }
 
 #form_tasting .slick-slide {
@@ -258,28 +309,24 @@ a.type-cheese {
 
 #type-cheese h3 {
     cursor: pointer;
-    color: inherit;
     padding: 5px;
     margin: 0;
     font-family: OpenSans, sans-serif;
     font-weight: 600;
     font-size: 14pt;
+    color: white;
+    font-style: normal;
+}
+
+#type-cheese > h3 {
+    color: inherit;
 }
 
 div.type-cheese {
     background: #e2b86a;
 }
 
-#type-cheese h3.cheese_name {
-    color: white;
-    font-family: OpenSans, sans-serif;
-    font-weight: 600;
-    font-size: 14pt;
-    font-style: normal;
-}
-
 #type-cheese p {
-    font-style: italic;
     width: 100%;
     color: white;
     padding: 5px;
@@ -290,86 +337,21 @@ div.type-cheese {
     width: 100%;
 }
 
-#type-cheese > div {
-    margin-bottom: 20px;
-}
-
 #type-cheese div.modal div.modal-content {
     background: #e2b86a;
     border-radius: 0;
 }
 
-#type-cheese div.type-cheese:focus {
+#type-cheese .cheese {
+    cursor: pointer;
+}
+
+#type-cheese .cheese:focus {
     outline-color: transparent;
 }
-#type-cheese div.type-cheese img:focus {
+
+#type-cheese .type-cheese img:focus {
     outline-color: transparent;
-}
-#type-cheese div.type-cheese a:focus {
-    outline-color: transparent;
-}
-#type-cheese div.modal div.container {
-    width: 900px;
-}
-
-#type-cheese div.white-cheese-modal_1 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.white-cheese-modal_2 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.white-cheese-modal_3 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.white-cheese-modal_4 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.blue-cheese-modal_1 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.blue-cheese-modal_2 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.blue-cheese-modal_3 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.extra-cheese-modal_1 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.extra-cheese-modal_2 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.extra-cheese-modal_3 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.extra-cheese-modal_4 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.super-extra-cheese-modal_1 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.super-extra-cheese-modal_2 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.super-extra-cheese-modal_3 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
-}
-
-#type-cheese div.super-extra-cheese-modal_4 div.bg_image {
-    background: url("../img/big_cheese.png") no-repeat;
 }
 
 #type-cheese div.modal div.bg_image {
@@ -386,11 +368,48 @@ div.type-cheese {
     display: none;
 }
 
+.modal-form input {
+    font-family: OpenSans, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 12pt;
+    margin: 10px 0;
+    border-radius: 0;
+    border-color: white;
+    background-color: #e2b86a;
+    color: white;
+}
+
+#type-cheese .modal-form button {
+    border-color: white;
+    background-color: transparent;
+    color: white;
+}
+
+.modal-form input:focus, .modal-form button:focus {
+    border-color: white;
+    box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    outline-color: transparent;
+}
+
+.modal-form button:focus:active {
+    outline-color: transparent;
+}
+
+.modal-form input::-webkit-input-placeholder {
+    color: white;
+}
+
+.modal-form input:-moz-placeholder,
+.modal-form input:-ms-input-placeholder {
+    color: white;
+}
+
 section#form_tasting p.form {
     font-size: 14pt;
 }
 
-section#form_tasting button {
+#form_tasting button {
     color: #e2b86a;
     border-color: #e2b86a;
     background-color: transparent;
@@ -399,8 +418,6 @@ section#form_tasting button {
 #certificates div.certificate:focus, #certificates div.certificate a:focus, #certificates div.certificate img:focus {
     outline-color: transparent;
 }
-
-
 
 #certificates div.modal div.modal-content {
     background: #e2b86a no-repeat;
@@ -719,8 +736,6 @@ footer div.commun p {
     margin-right: -6px;
 }
 
-
-
 @media screen and (min-width: 1200px) {
     .container {
         width: 960px;
@@ -741,6 +756,60 @@ footer div.commun p {
     .f-nav {
         padding: 0 0;
     }
+}
+
+#back-top {
+    position: fixed;
+    bottom: 30px;
+    right: 5%;
+}
+
+#back-top a {
+    width: 48px;
+    display: block;
+    text-align: center;
+    font: bold 8px Arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+
+#back-top a:hover {
+    text-decoration: underline;
+}
+
+#back-top span {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin-bottom: -14px;
+    background: url("../img/arrow_up.png") no-repeat;;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    filter: opacity(50%);
+    -webkit-filter: opacity(50%);
+    margin-right: -100px;
+
+}
+
+#back-top span:hover {
+    filter: none;
+    -webkit-filter: none;
+}
+
+* button.close {
+    opacity: .8;
+    color: white;
+    margin-right: 20px;
+}
+
+* button.close:hover, * button.close:focus {
+    opacity: 1;
+    color: white;
 }
 
 @media screen and (max-width: 991px) {
@@ -794,6 +863,13 @@ footer div.commun p {
         max-width: 600px;
     }
 
+    .carousel-caption > p {
+        font-size: 25pt;
+    }
+
+    .carousel-caption {
+        padding-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -831,6 +907,10 @@ footer div.commun p {
         width: auto;
     }
 
+    .carousel-caption > p {
+        font-size: 22pt;
+    }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -843,11 +923,19 @@ footer div.commun p {
     #certificates div.modal div.bg_image {
         height: 780px;
     }
+
+    .carousel-caption > p {
+        font-size: 20pt;
+    }
 }
 
 @media screen and (max-width: 550px) {
     #certificates div.modal div.bg_image {
         height: 680px;
+    }
+
+    .carousel-caption > p {
+        font-size: 18pt;
     }
 }
 
@@ -871,127 +959,20 @@ footer div.commun p {
     #certificates div.modal div.bg_image {
         height: 580px;
     }
+
+    .carousel-caption > p {
+        font-size: 14pt;
+    }
 }
 
 @media screen and (max-width: 400px) {
     #certificates div.modal div.bg_image {
         height: 480px;
     }
+
+    .carousel-caption > p {
+        font-size: 10pt;
+    }
 }
 
-#main {
-    font-family: Engine, sans-serif;
-    font-size: 25pt;
-    float: none;
-    width: 100%;
-}
 
-.left.carousel-control {
-    background: url("../img/left.png") no-repeat;
-    background-position-y: 50%;
-    background-position-x: 10%;
-
-}
-
-.right.carousel-control {
-    background: url("../img/right.png") no-repeat;
-    background-position-y: 50%;
-    background-position-x: 90%;
-}
-
-.carousel-caption {
-    background-color: rgba(224, 186, 106, 0.5);
-}
-
-.carousel-caption > p {
-    color: #fff;
-    font-family: Engine, sans-serif;
-    font-size: 30pt;
-}
-
-.carousel-indicators {
-    width: 99%;
-    left: 0;
-    margin-left: 0;
-    text-align: right;
-}
-
-.carousel-indicators li {
-    border-color: #e2b86a;
-}
-
-.carousel-indicators .active {
-    background-color: #e2b86a;
-
-}
-
-.class {
-    width: 400px;
-    margin: 0 auto;
-}
-#back-top {
-    position: fixed;
-    bottom: 30px;
-    right: 5%;
-}
-#back-top a {
-    width: 48px;
-    display: block;
-    text-align: center;
-    font: bold 8px Arial;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-}
-#back-top a:hover {
-    text-decoration: underline;
-}
-#back-top span {
-    width: 48px;
-    height: 48px;
-    display: block;
-    margin-bottom: -14px;
-    background: url("../img/arrow_up.png") no-repeat;;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-    filter: opacity(50%);
-    -webkit-filter: opacity(50%);
-    margin-right: -100px;
-
-}
-#back-top span:hover {
-    filter: none;
-    -webkit-filter: none;
-}
-* button.close {
-    opacity: .8;
-    color: white;
-    margin-right: 20px;
-}
-* button.close:hover, * button.close:focus{
-    opacity: 1;
-    color: white;
-}
-.modal-form input{
-    margin: 10px 0;
-    border-radius: 0;
-    border-color: white;
-    background-color: #e2b86a;
-    color: white;
-}
-.modal-form input:focus{
-    border-color: white;
-    box-shadow: inset 0 1px 1px white, 0 0 8px white;
-}
-
-.modal-form input::-webkit-input-placeholder{
-    color: white;
-}
-.modal-form input:-moz-placeholder,
-.modal-form input:-ms-input-placeholder{
-    color: white;
-}
