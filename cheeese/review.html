@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			margin: 100px;
+			width: 400px;
+			border: 1px solid black;
+		}
+		.long{
+			display: none;
+		}
+		span {
+			color: red;
+		}
+		
+		
+	</style>
+	
+	<script src="js/jquery.js"></script>
+	
+</head>
+<body>
+	<div class="review">
+		<img src="img/person_1.png">
+		<h3>Lorem ipsum dolor sit amet.</h3>
+		<p class="short"></p>
+		<p class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo repellendus quia blanditiis ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque, dolorem earum reprehenderit veniam nesciunt illo?</p>
+		
+	</div>
+	<div class="review">
+		<img src="img/person_1.png">
+		<h3>Lorem ipsum dolor sit amet.</h3>
+		<p class="short"></p>
+		<p class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo repellendus quia blanditiis ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque, dolorem earum reprehenderit veniam nesciunt illo?</p>
+		
+	</div>
+	<div class="review">
+		<img src="img/person_1.png">
+		<h3>Lorem ipsum dolor sit amet.</h3>
+		<p class="short"></p>
+		<p class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo repellendus quia blanditiis ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque, dolorem earum reprehenderit veniam nesciunt illo?</p>
+		
+	</div>
+	<script>
+		$(document).ready(function(){
+			var short = $("div.review").find('.short');
+			var long = $("div.review").find('.long');
+
+			for (var i = short.length - 1; i >= 0; i--) {
+				short[i].innerHTML = long[i].innerHTML.slice(0,40) + "... далее";
+			}
+
+			long.hide();
+		});
+
+
+
+		$("div.review").click(function() {
+				$(this).find('.long').toggle();
+				$(this).find('.short').toggle();
+			
+		});
+
+
+
+	</script>
+</body>
+</html>
