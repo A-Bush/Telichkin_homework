@@ -454,6 +454,9 @@ section#form_tasting p.form {
     margin: 10px 0;
 }
 
+p.long {
+    display: none;
+}
 .media {
     background-color: #e2b86a;
     background-clip: content-box;
@@ -487,11 +490,11 @@ h3.media-heading {
     font-style: italic;
 }
 
-section#form_bonus {
+#form_bonus {
     margin-top: 20px;
 }
 
-section#form_bonus p {
+#form_bonus p {
     font-size: 16.5pt;
 }
 

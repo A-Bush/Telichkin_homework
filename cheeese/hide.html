@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
-	</script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 100px;
+            width: 400px;
+            border: 1px solid black;
+        }
 
-	<
-	<script>
-		$(function(){
-			var elements, size, text, fulltext, shorttext, link, min_height, bloks_total;
-			link = '<span>далее</span>';
-			elements = $('.long');
+        .long {
+            display: none;
+        }
 
-			fulltext = "";
-			size = 100;
-			min_height = 100;
-			bloks_total = $('body').find('.ta');
-			console.log(bloks_total);
-			for (var i = elements.length - 1; i >= 0; i--) {
-				fulltext = elements[i].innerHTML;
-				if (fulltext.length > size) {
-					shorttext = fulltext.slice(0, size);
-					if(bloks_total.length){
-						for(i=0; i <= bloks_total.length - 1; i++){
-							blok_height = $(bloks_total[i]).height();
-							console.log(blok_height);
-							if(blok_height > min_height){
-								elements[i].innerHTML = fulltext;
-							}
-							else {
-								elements[i].innerHTML = shorttext
-							}
-						}
-					}
-				}
-			}
-		});
+        span {
+            color: red;
+        }
 
 
-	</script>
+    </style>
+
+    <script src="js/jquery.js"></script>
+
 </head>
 <body>
+<div class="review">
+    <img src="img/person_1.png">
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p class="short"></p>
+    <p class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo repellendus quia blanditiis
+        ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo
+        nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque,
+        dolorem earum reprehenderit veniam nesciunt illo?</p>
 
-	<p class="ta long" style="width: 200px; height: 79px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cum et natus consectetur ratione ab laboriosam, esse illum, expedita, numquam, quae quisquam dolore. Necessitatibus dolorum assumenda minima reiciendis eum nobis officia magnam beatae ad tempora laboriosam ea, explicabo neque, sed amet. Iusto inventore blanditiis sint, excepturi unde nulla error, hic nam itaque neque facere deleniti assumenda natus fugiat molestias ullam harum temporibus culpa dolores voluptates vel tempora suscipit omnis. Laboriosam repellat officia itaque impedit similique nobis quos neque maxime est corporis vero asperiores aliquid sapiente, deleniti accusamus. Possimus in non vero, totam voluptatibus. Velit reprehenderit, magnam expedita vero iure omnis.</p>
+</div>
+<div class="review">
+    <img src="img/person_1.png">
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p class="short"></p>
+    <p class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo repellendus quia blanditiis
+        ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo
+        nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque,
+        dolorem earum reprehenderit veniam nesciunt illo?</p>
 
+</div>
+<div class="review">
+    <img src="img/person_1.png">
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p class="short"></p>
+    <p class="long"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nemo
+        repellendus quia blanditiis
+        ea vero quisquam, dolor, similique veritatis quod temporibus, eveniet dolorem fuga ad tenetur odio accusamus quo
+        nesciunt hic consequuntur adipisci. Dolore ratione velit eaque nulla porro blanditiis magni harum, sed atque,
+        dolorem earum reprehenderit veniam nesciunt illo?</p>
 
+</div>
+<script>
+    $(document).ready(function () {
+        var short = $("div.review").find('.short');
+        var long = $("div.review").find('.long');
 
+        for (var i = short.length - 1; i >= 0; i--) {
+            short[i].innerHTML = long[i].innerHTML.slice(0, 40) + "... далее";
+        }
 
+        long.hide();
+    });
+</script>
+<script>
+
+    $("div.review").click(function () {
+        $(this).find('.rev').toggle(function () {
+
+            var short = $.find('.short');
+            var long = $.find('.long');
+            var rev;
+            for (var a = long.length - 1; i >= 0; i--) {
+                for (var b = short.length - 1; i >= 0; i--) {
+                    if (short[b] <= 40) {
+                        rev.innerHTML = long[a].innerHTML
+                    }
+                    else {
+                        rev.innerHTML = short[b].innerHTML
+                    }
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

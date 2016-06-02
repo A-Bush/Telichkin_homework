@@ -137,6 +137,21 @@
         });
     </script>
     <script type="text/javascript">
+        $(function(){
+            var short = $("div.review").find('.short');
+            var long = $("div.review").find('.long');
+
+            for (var i = short.length - 1; i >= 0; i--) {
+                short[i].innerHTML = long[i].innerHTML.slice(0,40) + "... далее";
+            }
+        });
+
+        $("div.review").click(function() {
+            $(this).find('.short').toggle();
+            $(this).find('.long').toggle();
+        });
+    </script>
+    <!--<script type="text/javascript">
         $(document).ready(function () {
             var elements, size, text, link;
             link = '<span>далее</span>';
@@ -154,7 +169,7 @@
                 }
             }
         });
-    </script>
+    </script>-->
     <script>
         function initMap() {
             var point = {lat: 44.482833, lng: 34.1555699};
@@ -1133,15 +1148,16 @@
     </div>
 </section>
 <section id="customers">
-    <a href="#"><h2 class="text-center text-uppercase">НАШИ ПОКУПАТЕЛИ О НАС </h2></a>
+    <h2 class="text-center text-uppercase">НАШИ ПОКУПАТЕЛИ О НАС </h2>
     <div class="container">
         <div class="col-md-4 media">
             <div class="media-left">
-                <img src="img/Person_1.png" alt="" class="">
+                <img src="img/person_1.png" alt="" class="">
             </div>
-            <div class="media-body customers">
+            <div class="media-body customers review">
                 <h3 class="media-heading">Валерий Бульйонов</h3>
                 <p>шеф-повар</p>
+                <p class="short"></p>
                 <p class="long">Неоднократно заказываю сыры для своего ресторана,
                     и всегда доволен качеством продукции и
                 </p>
@@ -1149,11 +1165,12 @@
         </div>
         <div class="col-md-4 media">
             <div class="media-left">
-                <img src="img/Person_2.png" alt="" class="">
+                <img src="img/person_2.png" alt="" class="">
             </div>
-            <div class="media-body">
+            <div class="media-body review">
                 <h3 class="media-heading">Марина Милая</h3>
                 <p>Менеджер магазиа продуктов</p>
+                <p class="short"></p>
                 <p class="long">Закупаем сыры для магазина довольно часто.
                     Наши покупатели всегда довольны большим
                 </p>
@@ -1161,11 +1178,12 @@
         </div>
         <div class="col-md-4 media">
             <div class="media-left">
-                <img src="img/Person_3.png" alt="" class="">
+                <img src="img/person_3.png" alt="" class="">
             </div>
-            <div class="media-body">
+            <div class="media-body review">
                 <h3 class="media-heading">Владимир Пивнов</h3>
                 <p>студент</p>
+                <p class="short"></p>
                 <p class="long">Покупаю вкуснейший сыр
                     по доступной для меня цене. Вкусно!
                 </p>
