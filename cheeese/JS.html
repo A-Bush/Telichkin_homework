@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <script>
+        var answer = prompt("Каково «официальное» название JavaScript?");
+        if (answer == "ECMAScript") {
+            alert("Верно!");
+        }
+        else {
+            alert("Не знаете? 'ECMAScript'!");
+        }
+    </script>
+    <script>
+        var a = prompt("Введите число, пожалуста");
+        if (a > 0) {
+            alert("1");
+        }
+        else if (a < 0) {
+            alert("-1");
+        }
+        else {
+            alert(0);
+        }
+    </script>
+    <script>
+        var a = prompt("Введите 'Логин', пожалуста");
+        if (a == null) {
+            alert("Вход отменен!");
+        }
+        else if (a.toUpperCase() == "АДМИН") {
+            var b = prompt("Введите 'Пароль', пожалуста");
+            if (b == null) {
+                alert("Вход отменен!");
+            }
+            else if (b == "Черный Властелин") {
+                alert("Добро пожаловать!");
+            }
+            else {
+                alert("Пароль неверен!");
+            }
+        }
+        else {
+            alert("Я вас не знаю!");
+        }
+    </script>
+    <script>
+
+
+        result = ((a + b) < 4) ? alert("Мало") : alert("Много");
+
+    </script>
+    <script>
+        var login = prompt("Введите 'Логин', пожалуйста");
+
+        message = (login == 'Вася') ? 'Привет' : (login == 'Директор') ? 'Здравствуйте' : (login == null) ? 'Нет логина' : '';
+        alert(message);
+    </script>
+</div>
+</body>
+</html>
