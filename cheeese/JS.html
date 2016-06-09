@@ -7,59 +7,97 @@
 </head>
 <body>
 <div>
-    <script>
-        var answer = prompt("Каково «официальное» название JavaScript?");
-        if (answer == "ECMAScript") {
-            alert("Верно!");
-        }
-        else {
-            alert("Не знаете? 'ECMAScript'!");
-        }
-    </script>
-    <script>
-        var a = prompt("Введите число, пожалуста");
-        if (a > 0) {
-            alert("1");
-        }
-        else if (a < 0) {
-            alert("-1");
-        }
-        else {
-            alert(0);
-        }
-    </script>
-    <script>
-        var a = prompt("Введите 'Логин', пожалуста");
-        if (a == null) {
-            alert("Вход отменен!");
-        }
-        else if (a.toUpperCase() == "АДМИН") {
-            var b = prompt("Введите 'Пароль', пожалуста");
-            if (b == null) {
-                alert("Вход отменен!");
+    <!-- <script>
+         function pow() {
+             var result = x;
+             for (; n > 1; n&#45;&#45;) {
+                 result *= x;
+             }
+             alert(result);
+             return result;
+         }
+         var x = prompt("Введите целое положительное число");
+         if (x < 0 || x == null) {
+             x = prompt("Вы ввели неверное значение. Введите целое положительное число");
+         }
+         var n = prompt("Введите степень в которую нужно возвести первое число");
+         if (n < 0 || n == null) {
+             n = prompt("Вы ввели неверное значение. Введите степень в которую нужно возвести первое число");
+         }
+         x = parseFloat(x);
+         n = parseFloat(n);
+         pow(x, n);
+     </script>-->
+    <!--<script>                                                    /*Цикл */
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+        function sumTo(n) {
+            var result = 0;
+            for (; n > 0; n&#45;&#45;) {
+                result += n;
             }
-            else if (b == "Черный Властелин") {
-                alert("Добро пожаловать!");
+            alert(result);
+            return result;
+        }
+        sumTo(n);
+    </script>-->
+    <!--<script>
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+
+        function sumTo(n) {
+
+            if (n != 1) {
+                return n += sumTo(n - 1);
             }
             else {
-                alert("Пароль неверен!");
+                return n;
             }
         }
-        else {
-            alert("Я вас не знаю!");
+        sumTo( n);
+        alert(sumTo(n));
+    </script>-->
+    <!--<script>
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+
+        function sumTo(n) {
+            return n * (n + 1) / 2;
         }
-    </script>
+        sumTo(n);
+        alert (sumTo(n));
+
+        </script>-->
+    <!--<script>
+        var n = prompt("Введите число для возврата факториала");
+        n = parseFloat(n);
+
+        function factorial(n) {
+
+            if (n != 1) {
+                return n *= factorial(n - 1);
+            }
+            else {
+                return n;
+            }
+        }
+        factorial( n);
+        alert(factorial(n));
+    </script>-->
     <script>
+        var n = prompt("Введите число для возврата факториала");
+        n = parseFloat(n);
 
-
-        result = ((a + b) < 4) ? alert("Мало") : alert("Много");
-
-    </script>
-    <script>
-        var login = prompt("Введите 'Логин', пожалуйста");
-
-        message = (login == 'Вася') ? 'Привет' : (login == 'Директор') ? 'Здравствуйте' : (login == null) ? 'Нет логина' : '';
-        alert(message);
+        function fib(n) {
+            if (n > 1) {
+                return fib(n-1) + fib(n-2);
+            }
+            else {
+                return n;
+            }
+        }
+        fib(n);
+        alert (fib(n));
     </script>
 </div>
 </body>
