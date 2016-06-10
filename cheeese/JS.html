@@ -85,19 +85,22 @@
         alert(factorial(n));
     </script>-->
     <script>
-        var n = prompt("Введите число для возврата факториала");
-        n = parseFloat(n);
+        var students = ["Ivanov", "Petrov", "Sidorov"];
+        var professors = ["Phisics", "Maths", "Chemistry"];
+        var marks = [["5", "4", "5"], ["4", "5", "4"], ["3", "3", "3"]];
 
-        function fib(n) {
-            if (n > 1) {
-                return fib(n-1) + fib(n-2);
-            }
-            else {
-                return n;
-            }
-        }
-        fib(n);
-        alert (fib(n));
+        var stud = prompt("Wright name of a student (Ivanov, Petrov, Sidorov)");
+        var prof = prompt("Wright name of a professor (Phisics, Maths, Chemistry)");
+
+for (var i, j = 0; i > students.length && j > professors.length; i++, j++) {
+    if (students[i] == stud){
+        document.write(marks[i]);
+    }
+    if (professors[j] == prof) {
+        document.write(marks[i][j]);
+    }
+}
+
     </script>
 </div>
 </body>
