@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <!-- <script>
+         function pow() {
+             var result = x;
+             for (; n > 1; n&#45;&#45;) {
+                 result *= x;
+             }
+             alert(result);
+             return result;
+         }
+         var x = prompt("Введите целое положительное число");
+         if (x < 0 || x == null) {
+             x = prompt("Вы ввели неверное значение. Введите целое положительное число");
+         }
+         var n = prompt("Введите степень в которую нужно возвести первое число");
+         if (n < 0 || n == null) {
+             n = prompt("Вы ввели неверное значение. Введите степень в которую нужно возвести первое число");
+         }
+         x = parseFloat(x);
+         n = parseFloat(n);
+         pow(x, n);
+     </script>-->
+    <!--<script>                                                    /*Цикл */
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+        function sumTo(n) {
+            var result = 0;
+            for (; n > 0; n&#45;&#45;) {
+                result += n;
+            }
+            alert(result);
+            return result;
+        }
+        sumTo(n);
+    </script>-->
+    <!--<script>
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+
+        function sumTo(n) {
+
+            if (n != 1) {
+                return n += sumTo(n - 1);
+            }
+            else {
+                return n;
+            }
+        }
+        sumTo( n);
+        alert(sumTo(n));
+    </script>-->
+    <!--<script>
+        var n = prompt("Введите число");
+        n = parseFloat(n);
+
+        function sumTo(n) {
+            return n * (n + 1) / 2;
+        }
+        sumTo(n);
+        alert (sumTo(n));
+
+        </script>-->
+    <!--<script>
+        var n = prompt("Введите число для возврата факториала");
+        n = parseFloat(n);
+
+        function factorial(n) {
+
+            if (n != 1) {
+                return n *= factorial(n - 1);
+            }
+            else {
+                return n;
+            }
+        }
+        factorial( n);
+        alert(factorial(n));
+    </script>-->
+ <!--   <script>
+        var students = ["Ivanov", "Petrov", "Sidorov"];
+        var professors = ["Phisics", "Maths", "Chemistry"];
+        var marks = [["5", "4", "5"], ["4", "5", "4"], ["3", "3", "3"]];
+
+        var stud = prompt("Wright name of a student (Ivanov, Petrov, Sidorov)");
+        var prof = prompt("Wright name of a professor (Phisics, Maths, Chemistry)");
+
+
+        /*for (var i = 0; i < students.length; i++) {
+         for (var j = 0; j < professors.length; ++j) {
+         if (students[i] == stud && professors[j] == prof) {
+         document.write('Student: ' + students[i] + ' - ' + marks[i] + "</br>" + 'Professor: ' + professors[j] + ' - ' + marks[i][j]);
+         }
+         }
+         }*/
+
+        for (var i = 0; i < students.length; ++i) {
+
+            if (students[i] == stud) {
+                for (var j = 0; j < professors.length; ++j) {
+                    if (professors[j] == prof)
+                        document.write('Student: ' + stud + ' - ' + marks[i] + "</br>" + 'Professor: ' + prof + ' - ' + marks[i][j]);
+                }
+            }
+        }
+
+
+    </script>-->
+    <script>
+        var students = {};
+        students.name = {"Ivanov", "Petrov", "Sidorov"};
+        students.Phisics = {"5", "4", "3"};
+        students.Maths = {"4", "5", "3"};
+        students.Chemistry = {"5", "4", "3"};
+
+        var stud = prompt("Wright name of a student (Ivanov, Petrov, Sidorov)");
+        var prof = prompt("Wright name of a professor (Phisics, Maths, Chemistry)");
+
+        for (var i = 0; i < students.name.length; ++i) /*{
+
+            if (students.name[i] == stud) {
+                for (var j = 0; j < professors.length; ++j) {
+                    if (professors[j] == prof)
+                        document.write('Student: ' + stud + ' - ' + marks[i] + "</br>" + 'Professor: ' + prof + ' - ' + marks[i][j]);
+                }
+            }
+        }*/
+document.write()
+
+
+
+
+    </script>
+</div>
+</body>
+</html>
