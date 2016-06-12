@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <script>
+        var automobile = {
+            mark: 'volvo',
+            transm: 'auto',
+            engine: 2400,
+            accel: function pover() {
+                var m, a, pov;
+                m = 1700;
+                a = 9.8;
+                pov = m * a;
+            },
+            color: {
+                metalic: 'white',
+                simple: 'black'
+            }
+
+        };
+        for (var key in automobile) {
+
+            if (typeof automobile[key] == 'function') {
+                continue;
+            }
+            if (typeof automobile[key] == 'object') {
+                continue;
+            }
+            console.log(key + " - " + automobile[key]);
+        }
+        for (var key in automobile) {
+            if (typeof automobile[key] == 'object') {
+                var type = automobile[key];
+                for (var key_obj in type) {
+                   console.log(key + ": " + key_obj + ' - ' + type[key_obj])
+                }
+            }
+        }
+    </script>
+</div>
+
+</body>
+</html>
