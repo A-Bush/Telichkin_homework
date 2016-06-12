@@ -37,9 +37,10 @@
         }
         for (var key in automobile) {
             if (typeof automobile[key] == 'object') {
+                console.log(key + ':')
                 var type = automobile[key];
                 for (var key_obj in type) {
-                   console.log(key + ": " + key_obj + ' - ' + type[key_obj])
+                    console.log("       " + key_obj + ' - ' + type[key_obj])
                 }
             }
         }
