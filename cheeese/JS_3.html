@@ -21,27 +21,47 @@
             },
             color: {
                 metalic: 'white',
-                simple: 'black'
-            }
+                simple: 'black',
+                defcolor: {
+                    uuumetalic: 'yellow',
+                    uuuutsimple: 'green',
+                    uuuufcolor: {
+                        ooooumetalic: 'blue',
+                        ooootsimple: 'orange'
 
-        };
-        for (var key in automobile) {
-
-            if (typeof automobile[key] == 'function') {
-                continue;
-            }
-            if (typeof automobile[key] == 'object') {
-                continue;
-            }
-            console.log(key + " - " + automobile[key]);
-        }
-        for (var key in automobile) {
-            if (typeof automobile[key] == 'object') {
-                console.log(key + ':')
-                var type = automobile[key];
-                for (var key_obj in type) {
-                    console.log("       " + key_obj + ' - ' + type[key_obj])
+                    }
+                },
+                color: {
+                    metalic: 'white',
+                    simple: 'black'
                 }
+            }
+        };
+         for (var key in automobile) {
+
+         if (typeof automobile[key] == 'function' || typeof automobile[key] == 'object') {
+         continue;
+         }
+         console.log(key + " - " + automobile[key]);
+         }
+        for (key in automobile) {
+            var type = automobile[key];
+            if (typeof type == 'object') {
+                console.log(key + ": ")
+                search(type, "")
+            }
+        }
+        function search (type) {
+            for (var key_obj in type) {
+
+                if (typeof type[key_obj] == 'object') {
+                    console.log(key_obj + ":");
+                    search (type[key_obj], key_obj);
+                    }
+                else {
+                    console.log("     "  + key_obj + ' = ' + type[key_obj])
+                }
+
             }
         }
     </script>
