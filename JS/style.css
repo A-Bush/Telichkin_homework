@@ -1,0 +1,117 @@
+section {
+	width: 100%;
+	min-height: 500px;
+}
+
+.stop {
+	width: 200px;
+	height: 45px;
+	background: #ce00ff;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+p {
+	color: blue;
+	text-align: center;
+}
+
+.change {
+	width: 200px;
+	height: 45px;
+	background: yellow;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+}
+
+.leave {
+	margin-top: 100px;
+	width: 150px;
+	height: 80px;
+	background: green;
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50px 0 50px 0;
+	transform: rotate(-50deg);
+}
+.leave p {
+	color: yellow;
+}
+
+.apple {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background: orange;
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+}
+.arrow_right {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid red;
+	border-bottom: 50px solid transparent;
+	position: absolute;
+	top: 280px;
+	right: 150px;
+}
+.arrow_right p {
+	margin-left: -90px;
+	margin-top: -9px;
+	width: 50px;
+	transform: rotate(90deg);
+	color: black;
+}
+
+.arrow_left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid red;
+	border-bottom: 50px solid transparent;
+	position: absolute;
+	top: 280px;
+	left: 150px;
+}
+.arrow_left p {
+	margin-left: 40px;
+	margin-top: -9px;
+	width: 50px;
+	transform: rotate(-90deg);
+	color: black;
+}
+
+.button_left {
+	width: 100px;
+	height: 50px;
+	border-radius: 20px;
+	background: pink;
+	position: absolute;
+	top: 450px;
+	left: 250px;
+}
+
+.button_right {
+	width: 100px;
+	height: 50px;
+	border-radius: 20px;
+	background: pink;
+	position: absolute;
+	top: 450px;
+	right: 250px;
+}
+.some {
+	background: green; 
+	border-radius: 50px; 
+	transform: rotate(70deg); 
+	transition: 1s;
+}
