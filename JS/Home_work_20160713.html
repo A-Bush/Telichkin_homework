@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <script>
+
+        function SomeObj(name) {
+            this.name = name;
+        }
+
+        SomeObj.staticProperty = "Property";
+
+        SomeObj.prototype.SomeMethod = function (){
+            document.write("Object name " + this.name + "<br/>");
+        };
+
+
+        SomeObj.staticMethod = function() {
+            document.write("Static Method and Property: "+ SomeObj.staticProperty + "<br/>");
+        };
+
+
+        var example = new SomeObj("NewExample");
+
+        // Вызов функции на объекте
+        example.SomeMethod();
+
+        // Вызов функции на конструкторе
+        SomeObj.staticMethod();
+
+    </script>
+</div>
+</body>
+</html>
