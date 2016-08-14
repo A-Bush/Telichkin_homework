@@ -3,38 +3,35 @@
  */
 
 window.onload = function () {
-    var name, surname, age, i;
-    i = 1;
+    var name, surname, age, mass, user;
+    mass = [];
+
     function User(name, surname, age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
-    function new_user() {
-        i++;
-        return i;
-    }
-var {user(i)} = get_info();
-    new_user();
-    console.log(user);
+    var add = document.getElementById("add");
+    add.onclick = function() {
+
+        var name = get_name();
+        var surname = get_surname();
+        var age = get_age();
+        user = new User(name, surname, age);
+        return mass.push(user);
+    };
 
 
-    function get_info() {
-        get_name();
-        get_surname();
-        get_age();
-        return new User(name, surname, age);
-    }
 
     function get_name() {
-        name = prompt("Write your name");
+        name = document.getElementById("InputName").value;
         str();
         function str() {
             do {
                 if (typeof(name) != "string") {
                     alert("wrong name");
-                    name = prompt("write another name");
+                    name = document.getElementById("InputName").value;
                 }
             } while (typeof(name) != "string");
         }
@@ -43,13 +40,13 @@ var {user(i)} = get_info();
     }
 
     function get_surname() {
-        surname = prompt("Write your surname");
+        surname = document.getElementById("InputSurname").value;
         str();
         function str() {
             do {
                 if (typeof(surname) != "string") {
                     alert("wrong surname");
-                    surname = prompt("write another surname");
+                    surname = document.getElementById("InputSurname").value;
                 }
             } while (typeof(surname) != "string");
         }
@@ -58,17 +55,20 @@ var {user(i)} = get_info();
     }
 
     function get_age() {
-        age = +prompt("Write your age");
+        age = document.getElementById("InputAge").value;
+        age = parseInt(age);
         num();
         function num() {
             do {
                 if (typeof(age) != "number") {
                     alert("wrong age");
-                    age = +prompt("write another age");
+                    age = document.getElementById("InputAge").value;
+                    age = parseInt(age);
                 }
             } while (typeof(age) != "number");
         }
 
         return age;
     }
+    console.log(mass);
 };

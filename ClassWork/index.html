@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <title>Work func and mass</title>
     <script src="app.js"></script>
+    <style>
+       form {
+           margin-left: auto;
+           margin-right: auto;
+           width: 500px;
+           margin-top: 50px;
+           text-align: center;
+
+       }
+        input {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            height: 40px;
+        }
+        label {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        button {
+            width: 28%;
+            height: 30px;
+            margin: 10px;
+            cursor: pointer;
+            color: white;
+            text-transform: uppercase;
+        }
+        #delete {
+            background-color: red;
+        }
+        #add {
+            background-color: orange;
+        }
+        #send {
+            background-color: green;
+        }
+
+
+    </style>
 </head>
 <body>
-<p>hello</p>
+
+<form>
+    <label for="InputName">Your name</label>
+    <input id="InputName" placeholder="name" required>
+    <label for="InputSurname">Your surname</label>
+    <input id="InputSurname" placeholder="surname" required>
+    <label for="InputAge">Your age</label>
+    <input id="InputAge" placeholder="age" required>
+    <button id="delete">delete</button>
+    <button id="add">add</button>
+    <button id="send">send</button>
+
+</form>
+
+
 </body>
 </html>
