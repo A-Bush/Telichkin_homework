@@ -81,25 +81,26 @@ window.eqfeed_callback = function (json) {
         all_markers.push(marker);
     }
 };
-
-
+//Основной код
 window.onload = function () {
     property = document.getElementById("map_property");
     input_region = document.getElementById("regions").getElementsByTagName("input");
     input_medical = document.getElementById("medical").getElementsByTagName("input");
     eqfeed_callback(json); //Запуск поиска меток
-
+//Отслеживание кликов по чекбоксам
     property.addEventListener('click', function () {
         checking();
         checkRegion();
         unmarkers();
         
     });
+//Обнуление значения проверки    
     function checking() {
         for(var b = 0; b < all_markers.length; b++) {
             all_markers[b].check = 'no';
         }
     }
+//Проверка региона    
     function checkRegion() {
         for (var a = 0; a < input_region.length; ) {
             if (input_region[a].checked) {
@@ -112,6 +113,7 @@ window.onload = function () {
             }
         }
     }
+//Проверка учереждений    
     function checkType(some_region) {
         for (var i = 0; i < input_medical.length; ) {
             if (input_medical[i].checked) {
@@ -124,6 +126,7 @@ window.onload = function () {
             }
         }
     }
+//Нахождение маркеров    
     function findMarker (some_region, some_type) {
         for (var j = 0; j < all_markers.length; ) {
             if (all_markers[j].type == some_type && all_markers[j].region == some_region) {
@@ -136,6 +139,7 @@ window.onload = function () {
             }
         }
     }
+//Чистка маркеров    
     function unmarkers() {
         for (var c = 0; c < all_markers.length;) {
             if (all_markers[c].check == 'no') {
@@ -147,62 +151,4 @@ window.onload = function () {
             }
         }
     }
-
-
 };
-
-
-/*window.onload = function () {
-
- var all_regions = document.getElementById("regions").getElementsByTagName("input"); //Все области
- var all_regions_value = document.getElementById("regions"); //Значение всех областей*!/
- hospit = document.getElementById("hospital"); //Все больницы
- pharm = document.getElementById("pharmacy"); //Все аптеки
- var image;
- //Добавление и уаление областей
- all_regions_value.onclick = function () {
- clearMarkers(all_hosp, null);
- clearMarkers(all_pharm, null);
- /!*checking(all_hosp, some_region);
- checking(all_pharm, some_region);*!/
- check_region();
- };
- //добавление и удаление Больниц с карты
- hospit.onclick = function () {
- check_region();
- };
- //добавление и удаление Аптек с карты
- pharm.onclick = function () {
- check_region();
- };
- //очистка маркерова
- function clearMarkers(all, map) {
- for (var i = 0; i < all.length; i++) {
- all[i].setMap(map);
- }
- }
-
-
-
- function check_hosp(some_region) {
- if (hospit.checked) {
- image = "images/placeholder_hosp.png";
- eqfeed_callback(json, "Лікарня", all_hosp, image, some_region);
- }
- else {
- clearMarkers(all_hosp, null);
- }
- }
-
- function check_pharm(some_region) {
- if (pharm.checked) {
- image = "images/placeholder_pharm.png";
- eqfeed_callback(json, "Аптека", all_pharm, image, some_region);
- }
- else {
- clearMarkers(all_pharm, null);
- }
- }
-
-
- };*/
