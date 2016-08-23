@@ -32,11 +32,11 @@
 
     </div>
     <div id="map_property">
-        <div id="checkbox">
+        <div id="medical">
             <form>
-                <input type="checkbox" id="hospital" name="hospital">
+                <input type="checkbox" value="Лікарня" id="hospital" name="hospital">
                 <label for="hospital">Лікарні</label>
-                <input type="checkbox" id="pharmacy" name="pharmacy">
+                <input type="checkbox"  value="Аптека" id="pharmacy" name="pharmacy">
                 <label for="pharmacy">Аптеки</label>
 
             </form>
