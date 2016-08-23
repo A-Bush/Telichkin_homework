@@ -1,4 +1,5 @@
-var map, json, all_pharm, all_hosp, hospit, pharm, some_region;
+var map, json, all_pharm, all_hosp, hospit, pharm, some_region, all_markers;
+all_markers = [];
 all_pharm = []; //массив маркеров аптек
 all_hosp = []; //массив маркеров больницы
 //Инициализация карты
@@ -28,10 +29,69 @@ function initMap() {
         }
     };
 })();
+//Запуск поиска меток
 window.onload = function () {
+    eqfeed_callback(json);
+};
+
+//Обработка данных из базы
+window.eqfeed_callback = function (json /*type, all, image, some_region*/) {
+    for (var i = 0; i < json.length; i++) {
+       /* if (json[i].type == type && json[i].region == some_region) {*/
+            find_marker();
+        /*}*/
+    }
+    function find_marker() {
+        var id = json[i].id;
+        var cords = json[i].cords;
+        cords = cords.split(',');
+        var latLng = new google.maps.LatLng(cords[0], cords[1]);
+        var title = json[i].name;
+        var region = json[i].region;
+        var city = json[i].city;
+        var address = json[i].address;
+        var site = json[i].site;
+        var telephone = json[i].telephone;
+        var person = json[i].person;
+        var marker = new google.maps.Marker({
+            position: latLng,
+            title: title,
+            map: map,
+           /* icon: image,*/
+            region: region,
+            id: id,
+            visible: false
+        });
+        //Информация об объекте при клике
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h1 id="firstHeading" class="firstHeading">' + title + '</h1>' +
+            '<div id="bodyContent">' +
+            '<address>' + region + ' область, м. ' + city + ', ' + address + '</address>' +
+            '<p class="site">Сайт: <a href="' + site + '">' +
+            site + '</a> </p>' +
+            '<p class="telephone">Телефон: <a href="tel:' + telephone + '">' +
+            telephone + '</a> </p>' +
+            '<p class="person">Керівництво: ' + person + '</p>' +
+            '</div>' +
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+        all_markers.push(marker);
+    }
+};
+
+
+
+/*window.onload = function () {
     var property = document.getElementById("map_property");
     var all_regions = document.getElementById("regions").getElementsByTagName("input"); //Все области
-    var all_regions_value = document.getElementById("regions"); //Значение всех областей*/
+    var all_regions_value = document.getElementById("regions"); //Значение всех областей*!/
     hospit = document.getElementById("hospital"); //Все больницы
     pharm = document.getElementById("pharmacy"); //Все аптеки
     var image;
@@ -39,8 +99,8 @@ window.onload = function () {
     all_regions_value.onclick = function () {
         clearMarkers(all_hosp, null);
          clearMarkers(all_pharm, null);
-        /*checking(all_hosp, some_region);
-        checking(all_pharm, some_region);*/
+        /!*checking(all_hosp, some_region);
+        checking(all_pharm, some_region);*!/
         check_region();
     };
     //добавление и удаление Больниц с карты
@@ -89,84 +149,5 @@ window.onload = function () {
         }
     }
 
-    /*function checking(argument, some_region) {
-        var temp = argument;
-        for (var i = 0; i < temp.length; i++) {
-            if (temp[i].region) {
-                argument = temp.filter(function () {
-                    return (temp[i].region == some_region);
-                });
-            }
-        }
-    }*/
-};
 
-//Обработка данных из базы
-window.eqfeed_callback = function (json, type, all, image, some_region) {
-    for (var i = 0; i < json.length; i++) {
-        if (json[i].type == type && json[i].region == some_region) {
-            find_marker(all);
-        }
-    }
-    function find_marker(all) {
-        var id = json[i].id;
-        var cords = json[i].cords;
-        cords = cords.split(',');
-        var latLng = new google.maps.LatLng(cords[0], cords[1]);
-        var title = json[i].name;
-        var region = json[i].region;
-        var city = json[i].city;
-        var address = json[i].address;
-        var site = json[i].site;
-        var telephone = json[i].telephone;
-        var person = json[i].person;
-        var marker = new google.maps.Marker({
-            position: latLng,
-            title: title,
-            map: map,
-            icon: image,
-            region: region,
-            id: id
-        });
-        //Информация об объекте при клике
-        var contentString = '<div id="content">' +
-            '<div id="siteNotice">' +
-            '</div>' +
-            '<h1 id="firstHeading" class="firstHeading">' + title + '</h1>' +
-            '<div id="bodyContent">' +
-            '<address>' + region + ' область, м. ' + city + ', ' + address + '</address>' +
-            '<p class="site">Сайт: <a href="' + site + '">' +
-            site + '</a> </p>' +
-            '<p class="telephone">Телефон: <a href="tel:' + telephone + '">' +
-            telephone + '</a> </p>' +
-            '<p class="person">Керівництво: ' + person + '</p>' +
-            '</div>' +
-            '</div>';
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-        });
-        all.push(marker);
-        /*checking_mark(marker);*/
-
-    }
-
-
-    /*function checking_mark(marker) {
-        var some_mark = all;
-        for (var j = 0; j <= some_mark.length; j++) {
-            if (some_mark[j].id) {
-                all = some_mark.filter(function () {
-                    return (some_mark[j].id !== json[i].id);
-                });
-            }
-            else {
-                all.push(marker);
-            }
-
-        }
-
-    }*/
-};
+};*/
