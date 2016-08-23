@@ -16,5 +16,3 @@ class DataBase{
         return $res->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
-

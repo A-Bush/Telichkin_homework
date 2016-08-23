@@ -2,21 +2,9 @@
 require_once("pdo.php");
 
 DataBase::connect();
-$hosp = DataBase::getAll('SELECT hospitals.hospitalID, hospitals.Name as name, hospitals.Cords, hospitals.City,
-  hospitals.Address, hospitals.Site, hospitals.Email, hospitals.Telephone, 
-  hospitals.Persons, hospitals.Region_id,
-  regions.Name as Region
-FROM hospitals 
-  LEFT JOIN regions ON regions.ID = hospitals.Region_id ');
+$medic = DataBase::getAll(' SELECT medical_org.id, medical_org.type, medical_org.name, medical_org.cords, 
+  medical_org.region, medical_org.city, medical_org.address, medical_org.site, 
+  medical_org.telephone, medical_org.person
+FROM medical_org ');
 
-
-$pharm = DataBase::getAll('SELECT pharmacy.ID as id, pharmacy.Name as name, pharmacy.Cords as coordinates, pharmacy.City as city,
-  pharmacy.Address as address, pharmacy.Site as site, pharmacy.Email as email, pharmacy.Telephone as telephone,
-  pharmacy.Persons as persons, pharmacy.Region_id,
-  regions.Name as region
-FROM pharmacy
-  LEFT JOIN regions ON regions.ID = pharmacy.Region_id
-');
-
-
-echo json_encode(array_merge($pharm, $hosp));
+echo json_encode($medic);
